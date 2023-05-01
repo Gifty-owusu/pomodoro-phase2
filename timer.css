@@ -1,0 +1,863 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300&family=Space+Mono:ital@1&display=swap');
+
+
+body{
+    background-color: #1E213F;
+    
+} 
+
+    #container{
+    text-align: center;
+   
+
+}
+
+#header{
+    color: #D7E0FF;
+    font-size: 35px;
+    padding: 0em 0em 0em 0em;
+    
+}
+
+    #spans{
+    width: 30em;
+    height: 4em;
+    background-color: #161932; 
+    border-radius: 40px;
+    margin: 1em auto;
+    
+        }
+
+    .options{
+        height: 3.5em;
+        margin-left: 2em;
+        padding: 0em 2em;
+        position: relative;
+        top: -0.3em;
+        color: #D7E0FF;
+        opacity: 0.8;
+        border-radius: 40px;
+        border: none;
+        z-index: 6;
+        }
+
+    .options:hover{
+            color: #fff;
+            opacity: 1;
+            
+        }
+
+    #pomodoro{
+            margin-left: -5em;
+            margin-right: 2em;
+            margin-top: 1em;
+            background-color: #161932;
+            cursor: pointer;
+            z-index: 6;
+        }
+
+        .defaulPomodoro{
+            margin-left: -5em;
+            margin-right: 2em;
+            margin-top: 1em;
+            background-color: #161932;
+            z-index: 6;
+        }
+
+        #long1{
+            margin-left: 1em;
+            margin-right: -5em;
+            background-color: #161932; 
+            cursor: pointer;
+            z-index: 6;
+        }
+
+        .defaultLong1{
+            margin-left: 1em;
+            margin-right: -5em;
+            background-color: #161932;
+            z-index: 6; 
+        }
+
+        #short1{
+            margin-right: 3em;
+            margin-left: 2em;
+            background-color: #161932;
+            cursor: pointer;
+            z-index: 6;
+        }
+
+        .defaultShort1{
+            margin-right: 3em;
+            margin-left: 2em;
+            background-color: #161932;
+            z-index: 6;
+        }
+
+        #clock-bg{
+            width: 26em;
+            height: 26em;
+            border-radius: 50%;
+            position: relative;
+            background-color: #161932;
+            left: 25.5em;
+            left: 50%;
+            top: 12.2em;
+            transform: translate(-50%,-50%);
+         }
+
+         #clock-bg-axis-xy {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%,-50%);
+        }
+
+         #clock-bg2{
+            width: 24em;
+            height: 24em;
+            margin: auto;
+            background-color: #161932;
+            border-radius: 100%;
+            position: relative;
+            top: 1em;
+            left: -0.1em;
+            opacity: 0.2;
+            box-shadow: -18px -18px 30px 30px #2E325A;
+            transform-origin: right center;
+            z-index: 2;
+        }
+
+        #stroke_circle{
+            background-color: #161932;
+            background-color: #F87070;
+            background-color: transparent;
+            width: 21.5em;
+            height: 21.5em;
+            border-radius: 50%;
+            position: relative;
+            top: -23.5em;
+             margin: -0.5em 1.8em;
+            overflow: hidden;
+            z-index: 4;
+        }
+        #stroke_circle2{
+            background-color: #161932;
+            background-color: transparent;
+            width: 22em;
+            height: 22em;
+            top: -43em;
+            z-index: 3;
+            margin : -4em 1.51em;
+            position:relative;
+            border-radius: 50%;
+            
+        }   
+
+        #stroke_cirle3{
+            background-color: #161932;
+            width: 19.5em;
+            border-radius: 50%;
+            height: 21.5em;
+            top: -56em;
+            margin : -0.2em 2.9em;
+            position: relative;
+            transition: 0s linear;
+            z-index: 5;
+        }
+
+         
+          .time-min{
+            font-size: 5.5em;
+            color: #fff;
+            margin: auto;
+            position: relative;
+            top: -13.2em;
+            left: 1.2em;
+            z-index: 5;
+         }
+
+        .time-colon{
+            font-size: 5.5em;
+            color: #fff;
+            margin: auto;
+            position: relative;
+            top: -14.4em;
+            left: 2.3em;
+           z-index: 5;
+        }
+
+        .time-sec{
+            font-size: 5.5em;
+            color: #fff;
+            margin: auto;
+            position: relative;
+            top: -15.5em;
+            left: 2.7em;
+           z-index: 5;
+        }
+
+        .start{
+            color: #fff;
+            letter-spacing: 0.5em;
+            position: relative;
+            left: 12.5em;
+            top: -144em;
+            cursor: pointer;
+            background-color: transparent;
+            border: none;
+            font-weight: 600;
+            z-index: 5;
+           
+
+        }
+        .pause{
+            color: #fff;
+            letter-spacing: 0.5em; 
+            cursor: pointer;
+        }
+        .restart{
+            color: #fff;
+            letter-spacing: 0.5em; 
+            cursor: pointer;   
+        }
+
+        #settings_icon{
+            margin: 3% 45% 1% 49%;
+            position: relative;
+            top: -1.5em;
+            left: -0.5em;
+            
+        }
+
+        #settings{
+            margin: 4% 38% 1% 47%; 
+            position: relative;
+            top: -36em;
+            bottom: 3em;
+            display: none;
+            z-index: 6;
+        }
+
+        #settings-dashboard{
+            background-color: #fff;
+           
+            width: 32em;
+            height: 28em;
+            border-radius: 2em;
+            margin: auto;
+            position: relative;
+            right: 14em;
+         
+            }
+
+            #settings-text{
+                font-size: 1.5em;
+                font-family: sans-serif;
+                font-weight: 600;
+                padding: 1em 1.5em;
+                
+            }
+
+            #close_icon{
+                padding-left: 12em;
+                }
+
+            .one{
+                position: relative;
+                top: -1.5em;
+            }
+
+            #time-text{
+                padding: 0em 1.9em;
+                margin-top: -0.8em;
+                letter-spacing: 0.1em;
+                font-size: 0.85em;
+                font-weight: 600;
+            }
+
+            input{
+                width: 8em;
+                height: 2.5em;
+                background-color: #EFF1FA;
+                border-radius: 0.8em;
+                border: none;
+                cursor: pointer;
+            }
+
+            .pomodoro_arrow{
+                position: relative;
+                top: 3em;
+                right: 15em;
+                background-color: #EFF1FA;
+                border: none;
+                cursor: pointer;
+            }
+
+            .short_arrow{
+                position: relative;
+                right: 5.2em;
+                top: -9.5em;
+                background-color: #EFF1FA;
+                border: none;
+                cursor: pointer;
+            }
+
+            .long_arrow{
+                position: relative;
+                right: -31.5em;
+                top: -16em;
+                background-color: #EFF1FA;
+                border: none;
+                cursor: pointer;
+            }
+
+            .arrow_up{
+                position: relative;
+                top: -0.5em;
+                left: 1.5em
+            }
+
+            .arrow_down{
+                position: relative;
+                top: 0.5em;
+                right: -0.15em 
+            }
+
+            input .Text1{
+                cursor: pointer;
+            }
+
+            .text1{
+                margin: 1em 1em;
+                opacity: 0.7;
+                
+            }
+
+            .text2{
+                margin: -4.4em 11.2em;
+                opacity: 0.7;
+                position: relative;
+                top: -2em;
+            }
+            .text3{
+                margin: -5.5em 22.2em;
+                opacity: 0.7;
+                position: relative;
+                top: -12em;
+            }
+
+            .Text1{
+            margin : 0em 1em 0.5em 3em;
+            padding-left: 1em;
+              position: relative;
+              top: 3em;
+              right: 10em;
+               
+              }
+            .Text2{
+                margin: 8em 1em 0em 13em;
+                padding-left: 1em;
+                position: relative;
+                top: -9.5em;
+            }
+            .Text3{
+               margin: -2em 2em 1em 26em;
+                position: relative;
+                top: -13em;
+                padding-left: 1em;
+            }
+
+            .two{
+                position: relative;
+                top: -14em;
+                width: 28em;
+                right: 13em;
+                left: -11em;
+            }
+
+            #font-styles{
+                letter-spacing: 0.8em;
+                font-size: 0.85em;
+                position: relative;
+                top: -15em; 
+                right: 13em;
+                font-weight: 600;
+            }
+
+            .f1{
+                font-family: 'Kumbh Sans', sans-serif;
+                width: 3em;
+                height: 3em;
+                border-radius: 50%;
+                background-color: #EFF1FA; 
+                position: relative;
+                top: -18em;
+                left: 7em;
+                border: none;
+                cursor: pointer;
+                 }
+
+            .f2{
+                font-family: 'Roboto Slab', serif;
+                width: 3em;
+                height: 3em;
+                border-radius: 50%;
+                background-color: #EFF1FA; 
+                position: relative;
+                top: -18em;
+                left: 9em;
+                border: none;
+                cursor: pointer;
+            }
+
+            .f3{
+                font-family: 'Space Mono', monospace;
+                width: 3em;
+                height: 3em;
+                border-radius: 50%;
+                background-color: #EFF1FA;
+                position: relative;
+                top: -18em;
+                left: 11em;
+                border: none;
+                cursor: pointer;
+                
+            }
+
+            .three{
+                width: 28em;
+                position: relative;
+                top: -14em;
+                right: 11em;
+            }
+
+            #change-colors{
+                letter-spacing: 0.8em;
+                font-size: 0.85em;
+                position: relative;
+                top: -15em; 
+                right: 13em;
+                font-weight: 600;
+            }
+
+            .c1{
+                width: 3em;
+                height: 3em;
+                border-radius: 50%;
+                background-color: #F87070; 
+                position: relative;
+                top: -18em;
+                left: 7em;
+                border: none;
+                cursor: pointer;
+                 }
+
+                .c2{
+                    width: 3em;
+                    height: 3em;
+                    border-radius: 50%;
+                    background-color: #70F3F8;
+                    border: none;
+                    position: relative;
+                    top: -18em;
+                    left: 9em;
+                    cursor: pointer;
+                }
+
+                .c3{
+                    width: 3em;
+                    height: 3em;
+                    border-radius: 50%;
+                    background-color: #D881F8;
+                    position: relative;
+                    top: -18em;
+                    left: 11em;
+                    border: none;
+                    cursor: pointer;
+                }
+
+                .apply-button{
+                    width: 5em;
+                    height: 2em;
+                    background-color: #EFF1FA;
+                    border-radius: 0.8em;
+                    padding-left: 2em;
+                    padding-top: 1em;
+                    margin-top: -15em;
+                    margin-left: 12em;
+                    position: relative;
+                    top: 16em;
+                    z-index: 0;
+                    cursor: pointer;
+                }
+
+
+
+                .hide_btn {
+                    display: none;
+                }
+                .show_btn {
+                    display: block;
+                }
+                .Pause {
+                    display: none;
+                }
+                .Restart {
+                    display: none;
+                }
+                
+                /* css for new progress bar */
+        
+            .center {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+            .main-container {
+            width: 100%;
+            height: 100vh;
+            position: relative;
+            top: -86.5em;
+            left: 0em;
+            left: 25.5em;
+            left: 50%;
+         
+            transform: translate(-50%,-50%);
+            
+        }
+        
+        .circle-container {
+            width: 390px;
+            height: 390px;
+            background-color: white;
+            background-color: #ddd;
+            background-color: #252845;
+            border-radius: 50%;
+            position: relative;
+            z-index: 1;
+            overflow: hidden;
+        
+        }
+        
+        .semicircle {
+            width: 50%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            transform-origin: right center;
+            
+        }
+        
+        .semicircle:nth-child(1) { 
+            background-color: red;
+            background-color: #088b8b;
+           
+            z-index: 2;
+        }
+        
+        .semicircle:nth-child(2){
+            background-color: blue;
+            background-color: #088b8b;
+           
+            z-index: 3;
+        }
+        
+        .semicircle:nth-child(3){
+            background-color: white;
+            background-color: #ddd;
+            background-color: #252845;
+            
+          
+            /*display: none;*/
+            z-index: 4;
+        }
+        
+        .outermost-circle{
+            width: 370px;
+            height: 370px;
+            background-color: #161932;
+            border-radius: 50%;   
+            z-index: 5;
+            /*display: none;*/
+        }
+    
+        @media only screen and  (max-width: 868px){
+            #container{
+                max-width: 868px;
+
+               }
+           
+            #settings-dashboard{
+                width: 30em;
+                height: 26em;
+                background-color: red;
+                position: relative;
+                top: 3em;
+                right: 14em;
+                
+            }
+
+            .two{
+                position: relative;
+                top: -9em;
+                width: 28em;
+                right: 13em;
+                left: -13em;
+            }
+
+        #font-styles{
+            position: relative;
+            top: -9em;
+        }
+           
+
+        .f1{
+            position: relative;
+            top: -12.5em;
+            left: 4em; 
+        }
+
+        .f2{
+            position: relative;
+            top: -12.5em;
+            left: 6em;  
+        }
+
+        .f3{
+            position: relative;
+            top: -15.5em;
+            left: 14em; 
+        }
+
+        .three{
+            position: relative;
+                top: -12em;
+                right: 13em;
+        }
+
+        #change-colors{
+            position: relative;
+            top: -13em; 
+            right: 13em;
+
+        }
+
+        .c1{
+            position: relative;
+            top: -16.5em;
+            left: 4em;  
+        }
+
+        .c2{
+            position: relative;
+            top: -16.5em;
+            left: 6em;  
+        }
+
+        .c3{
+            position: relative;
+            top: -19.7em;
+            left: 14.5em;
+        }
+
+        .apply-button{
+            position: relative;
+            top: 14em;
+            
+        }
+    }
+
+    @media only screen and (max-width: 681px){
+
+        #container{
+            max-width: 680px;
+           
+        }
+
+        #settings-dashboard{
+            width: 28em;
+            height: 26em;
+            background-color: blue;
+            position: relative;
+            top: 4em;
+            left: -13em;
+            
+        }
+
+        #close_icon{
+            padding-left: 13em;
+            position: relative;
+            top: -1.1em;
+            }
+
+            .one{
+                position: relative;
+                top: -2.5em;
+            }
+
+            #time-text{
+                position: relative;
+                top: -1em;
+            }
+
+            .text1{
+                margin: 3em 1em;
+                position: relative;
+                top: -1.5em;
+                
+            }
+
+            .text2{
+                margin: -5.4em 11.2em;
+                opacity: 0.7;
+                position: relative;
+                top: -3.5em;
+            }
+            .text3{
+                margin: -5.5em 22.2em;
+                opacity: 0.7;
+                position: relative;
+                top: -13.5em;
+            }
+
+            .two{
+                position: relative;
+                top: -9em;
+                width: 28em;
+                right: 13em;
+                left: -13em;
+            }
+
+        #font-styles{
+            position: relative;
+            top: -8.5em;
+        }
+
+        .Text1{
+            margin : 0em 1em 0.5em 3em;
+            padding-left: 1em;
+              position: relative;
+              top: 1em;
+              right: 10em;
+              width: 7em;
+               
+              }
+            .Text2{
+                margin: 8em 1em 0em 12em;
+                padding-left: 1em;
+                position: relative;
+                top: -11.5em;
+                width: 7em;
+            }
+            .Text3{
+               margin: -2em 2em 1em 25em;
+                position: relative;
+                top: -15em;
+                padding-left: 1em;
+                width: 7em;
+            }
+
+            .pomodoro_arrow{
+                position: relative;
+                top: 1em;
+                right: 15em;
+                background-color: #EFF1FA;
+                border: none;
+                cursor: pointer;
+            }
+
+            .short_arrow{
+                position: relative;
+                right: 5.2em;
+                top: -11.5em;
+                background-color: #EFF1FA;
+                border: none;
+                cursor: pointer;
+            }
+
+            .long_arrow{
+                position: relative;
+                right: -29.5em;
+                top: -18em;
+                background-color: #EFF1FA;
+                border: none;
+                cursor: pointer;
+            }
+
+            .two{
+                position: relative;
+                top: -8em;
+            }
+
+            .f1{
+                position: relative;
+                top: -11.5em;
+                left: 0em; 
+               
+            }
+    
+            .f2{
+                position: relative;
+                top: -14.2em;
+                left: 5em; 
+
+            }
+    
+            .f3{
+                position: relative;
+                top: -17.2em;
+                left: 10.5em; 
+            }
+
+            .three{
+                position: fix;
+                top: -12.5em;
+                left: -13em; 
+               
+            }
+
+            .c1{
+                position: relative;
+                top: -18em;
+                left: 0em;  
+            }
+    
+            .c2{
+                position: relative;
+                top: -21em;
+                left: 5em;  
+            }
+    
+            .c3{
+                position: relative;
+                top: -24.2em;
+                left: 10em;
+            }
+    
+            .apply-button{
+                position: relative;
+                top: 12.5em;
+                left: -2em;
+                
+            }
+            
+    }
+
+    @media only screen and (max-width: 326px){
+
+        #settings-dashboard{
+            width: 30em;
+            height: 26em;
+            background-color: green;
+            position: relative;
+            top: 5em;
+            left: -11em;
+            
+        }
+
+    }
+        
