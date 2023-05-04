@@ -687,12 +687,7 @@ body{
     }
 
     @media only screen and  (max-width: 600px){
-        body{
-            overflow-y: hidden;
-            overflow-y: hidden;
-        }
-
-        #font-styles{
+            #font-styles{
             position: relative;
             top: -7.5em;
         }
