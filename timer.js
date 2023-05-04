@@ -137,6 +137,9 @@ function shortOnclick(){
         document.getElementById("pomodoro").style.background = "#161932";
         document.getElementById("long1").style.background = "#161932";
     };
+
+
+
 };
 // function for setting button colors and disabling other colors onclick 
 function longOnclick(){
@@ -172,6 +175,13 @@ window.btnTwoActive = "null";
 
 //functions for changing font styles of the timer options
 function fontF1(){
+    // selected font style "identifier for selected font".
+    document.getElementById("fontOne").style.background = "#161932";
+    document.getElementById("fontOne").style.color = "#fff";
+    document.getElementById("fontTwo").style.background = "#EFF1FA";
+    document.getElementById("fontThree").style.background = "#EFF1FA";
+    document.getElementById("fontTwo").style.color = "#000";
+    document.getElementById("fontThree").style.color = "#000";
     //document.getElementById("f1-border").style.borderColor = "red";
     document.getElementById("pomodoro").style.fontFamily = "'Kumbh Sans', sans-serif";
     document.getElementById("short1").style.fontFamily = "'Kumbh Sans', sans-serif";
@@ -186,6 +196,13 @@ function fontF1(){
 }
 
 function fontF2(){
+    // selected font style "identifier for selected font".
+    document.getElementById("fontTwo").style.background = "#161932";
+    document.getElementById("fontTwo").style.color = "#fff";
+    document.getElementById("fontOne").style.background = "#EFF1FA";
+    document.getElementById("fontThree").style.background = "#EFF1FA";
+    document.getElementById("fontThree").style.color = "#000";
+    document.getElementById("fontOne").style.color = "#000";
     document.getElementById("pomodoro").style.fontFamily = "'Roboto Slab', serif";
     document.getElementById("short1").style.fontFamily = "'Roboto Slab', serif";
     document.getElementById("long1").style.fontFamily = "'Roboto Slab', serif";
@@ -199,6 +216,13 @@ function fontF2(){
 }
 
 function fontF3(){
+    // selected font style "identifier for selected font".
+    document.getElementById("fontThree").style.background = "#161932";
+    document.getElementById("fontThree").style.color = "#fff";
+    document.getElementById("fontTwo").style.background = "#EFF1FA";
+    document.getElementById("fontOne").style.background = "#EFF1FA";
+    document.getElementById("fontTwo").style.color = "#000";
+    document.getElementById("fontOne").style.color = "#000";
     document.getElementById("pomodoro").style.fontFamily = "'Space Mono', monospace";
     document.getElementById("short1").style.fontFamily = "'Space Mono', monospace";
     document.getElementById("long1").style.fontFamily = "'Space Mono', monospace";
@@ -348,9 +372,9 @@ function apply() {
     clearInterval(timerLoop);
     document.getElementById("pause").style.display = "none";
     document.getElementById("restart").style.display = "block";
-    setTimeout(function(){
-        window.location.reload();
-    }, 5000);
+    //setTimeout(function(){
+       // window.location.reload();
+   // }, 5000);
   }
   
   function restart(){
