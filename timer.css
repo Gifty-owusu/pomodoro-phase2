@@ -476,7 +476,7 @@ body{
                     width: 5em;
                     height: 2em;
                     background-color: #EFF1FA;
-                    border-radius: 0.8em;
+                    border-radius: 26.5px;
                     padding-left: 2em;
                     padding-top: 1em;
                     margin-top: -15em;
@@ -546,7 +546,6 @@ body{
         .semicircle:nth-child(1) { 
             background-color: red;
             background-color: #088b8b;
-           
             z-index: 2;
         }
         
@@ -562,8 +561,6 @@ body{
             background-color: #ddd;
             background-color: #252845;
             
-          
-            /*display: none;*/
             z-index: 4;
         }
         
@@ -573,7 +570,7 @@ body{
             background-color: #161932;
             border-radius: 50%;   
             z-index: 5;
-            /*display: none;*/
+           
         }
         
 
@@ -597,7 +594,7 @@ body{
                 top: 5em;
                 right: 14em;
                 right: 12em;
-                background-color: #088b8b;
+                
             }
 
             input{
@@ -690,9 +687,9 @@ body{
     }
 
     @media only screen and  (max-width: 600px){
-        #settings-dashboard{
-            
-            background-color: blue;
+        body{
+            overflow-y: hidden;
+            overflow-y: hidden;
         }
 
         #font-styles{
@@ -759,751 +756,256 @@ body{
         }
     }
 
-   /* @media only screen and  (max-width: 568px){
-        #container{
-            max-width: 568px;
-
-           }
-
-           .start{
-            position: relative;
-            top: -138em;
-           }
-       
-        #settings-dashboard{
-            width: 30em;
-            height: 26em;
-            position: relative;
-            top: 5em;
-            right: -2em;
-            
-        }
+    @media only screen and  (max-width: 376px){
 
         #header{
-            color: #D7E0FF;
-            font-size: 35px;
-            padding: 1em 12em 0em 12em;
-           
+            padding: 1em 8em;
         }
 
-        #spans{
-            width: 30em;
-            height: 4em;
-            background-color: #161932; 
-            border-radius: 40px;
-            margin: 1em 14em;
-            
-                }
-
-        #clock-bg{
-         position: relative;
-         background-color: #161932;
-         left: 110%;
-         top: 13.2em;
-        
+        .start{
+            top: -138em;
         }
 
         #settings_icon{
+            top: -4em;
+            padding-left: 10em;
+        }
+
+        #spans{
+            margin: 3em 8em;
+        }
+
+        #settings-dashboard{
+        width: 40em;
+        height: 58em;
+        top: 5em;
+        position: fixed;
+        left: 5em;
+    }
+
+    
+    #clock-bg{
+        padding: 2em;
+        margin: 6em 10em;
+    }
+
+    #settings-text{
+        font-size: 2em;
+        }
+
+    #close_icon{
+        padding-left: 10em;
+        }
+
+        .three{
             position: relative;
+            width: 30em;
+            right: 18em;
+            left: -0.9em;
+            top: 8em;
+        }
+
+        #change-colors{
+            position: relative;
+            top: 5em; 
+            right: -5em;
+            font-size: 1.6em;
+        }
+
+        .c1{
+            position: relative;
+            top:  9em;
+            left: 3.5em;
+            width: 6em;
+            height: 6em; 
+        }
+
+        .c2{
+            position: relative;
+            top:  2.5em;
             left: 14.5em;
-            top: .5em;
+            width: 6em;
+            height: 6em; 
+        }
+
+        .c3{
+            position: relative;
+            top:  -3.5em;
+            left: 25.5em;
+            width: 6em;
+            height: 6em;
+        }
+
+        .apply-button{
+            top: 35em;
+            left: 1em;
+            width: 10em;
+            height: 2em;
+            padding-top: 4em;
+            padding-left: -5em;
+            margin-top: -15em;
+            
+            
+        }
+
+        #applyID{
+            font-size: 2em;
+            position: absolute;
+            top: 1em;
+            left: 1.3em;
         }
 
         .two{
             position: relative;
-            top: -8em;
+            top: 18em;
             width: 30em;
-            right: 2em;
-            left: 2em;
+            right: 12em;
+            left: -.9em;
         }
-
-    #font-styles{
-        position: relative;
-        top: -7em;
-        left: 5em;
-    }
-       
-
-    .f1{
-        position: relative;
-        top: -10.5em;
-        left: 22em; 
-    }
-
-    .f2{
-        position: relative;
-        top: -13.5em;
-        left: 27em;  
-    }
-
-    .f3{
-        position: relative;
-        top: -16.5em;
-        left: 32em; 
-    }
-
-    .three{
-        position: relative;
-            top: -13em;
-            right: -2em;
-            width: 30em;
-    }
-
-    #change-colors{
-        position: relative;
-        top: -14em; 
-        right: -5em;
-
-    }
-
-    .c1{
-        position: relative;
-        top: -17.2em;
-        left: 22em;  
-    }
-
-    .c2{
-        position: relative;
-        top: -20.4em;
-        left: 27em;  
-    }
-
-    .c3{
-        position: relative;
-        top: -23.7em;
-        left: 32em;
-    }
-
-    .apply-button{
-        position: relative;
-        top: 14em;
-        
-    }
-}
-
-    @media only screen and (max-width: 426px){
-
-         Body{
-            
-         }
-        #container{
-            max-width: 426px;
-           
-        }
-
-        #header{
-            color: #D7E0FF;
-            font-size: 37px;
-            padding: 1em 11em 0em 11em;
-          
-           
-        }
-        
-            #spans{
-            width: 735PX;
-            height: 125PX;
-            background-color: #161932; 
-            border-radius: 40px;
-            margin: 2em 11.5em;
-            
-                }
-
-    .options{
-        height: 4.5em;
-        margin-left: 1em;
-        padding: 0em 2em;
-        position: relative;
-        top: 0.1em;
-        color: #D7E0FF;
-        opacity: 0.8;
-        border-radius: 40px;
-        border: none;
-        z-index: 6;
-        font-size: 1.2em;
-         }
-
-     #pomodoro{
-        margin-left: -5em;
-         margin-right: 2em;
-         margin-top: 1em;
-         background-color: #161932;
-         cursor: pointer;
-         z-index: 6;
-                    }
-
-       #clock-bg{
-         width: 59em;
-         height: 59em;
-        
-         position: relative;
-         left: 140%;
-         top: 29em;
-         
-        }
-
-        .outermost-circle{
-            width: 51em;
-            height: 51em;
-              }
-    
-        #stroke_cirle3{
-            background-color: #161932;
-            width: 50em;
-            height: 50em;
-            top: -85em;
-            margin : -0.2em 3.9em;
-            position: relative;
-            
-        }
-
-        .time-min{
-            font-size: 5.5em;
-            position: relative;
-            top: -21em;
-            left: 3.2em;
-           
-         }
-
-        .time-colon{
-            font-size: 5.5em;
-            color: #fff;
-            margin: auto;
-            position: relative;
-            top: -22.2em;
-            left: 4.7em;
-            z-index: 5;
-        }
-
-        .time-sec{
-            font-size: 5.5em;
-            color: #fff;
-            margin: auto;
-            position: relative;
-            top: -23.3em;
-            left: 5.5em;
-           z-index: 5;
-        }
-
-        .start{
-            color: #fff;
-            letter-spacing: 0.5em;
-            position: relative;
-            left: 12.5em;
-            top: -145em;
-            cursor: pointer;
-            background-color: transparent;
-            border: none;
-            font-weight: 600;
-            z-index: 5;
-           
-
-        }
-
-        #settings_icon{
-            margin: 3% 45% 1% 49%;
-            position: relative;
-            top: 2.5em;
-            left: 22.5em;
-            
-        }
-
-
-        #settings-dashboard{
-            width: 38em;
-            height: 26em;
-            position: relative;
-            top: 4em;
-            left: -2em;
-            
-        }
-
-        #close_icon{
-            padding-left: 13.5em;
-            position: relative;
-            top: -1.1em;
-            }
-
-            .one{
-                position: relative;
-                top: -2.5em;
-            }
-
-            #time-text{
-                position: relative;
-                top: -1em;
-            }
-
-            .text1{
-                margin: 3em 1em;
-                position: relative;
-                top: -1.5em;
-                
-            }
-
-            .text2{
-                margin: -5.4em 11.2em;
-                opacity: 0.7;
-                position: relative;
-                top: -3.5em;
-            }
-            .text3{
-                margin: -5.5em 22.2em;
-                opacity: 0.7;
-                position: relative;
-                top: -13.5em;
-            }
-
-            .two{
-                position: relative;
-                
-                width: 27.8em;
-                right: 13em;
-                left: -2em;
-                top: -8em;
-            }
 
         #font-styles{
+            font-size: 1.6em;
             position: relative;
-            top: -8.5em;
-            left: -1em;
+            top: 11em; 
+            right: -6em;
+            
         }
 
-        .Text1{
-            margin : 0em 1em 0.5em 3em;
-            padding-left: 1em;
-              position: relative;
-              top: 1em;
-              right: 10em;
-              width: 7em;
-               
-              }
-            .Text2{
-                margin: 8em 1em 0em 12em;
-                padding-left: 1em;
-                position: relative;
-                top: -11.5em;
-                width: 7em;
-            }
-            .Text3{
-               margin: -2em 2em 1em 25em;
-                position: relative;
-                top: -15em;
-                padding-left: 1em;
-                width: 7em;
-            }
-
-            
-
-            input{
-                width: 5em;
-                height: 2.5em;
-                background-color: #EFF1FA;
-                border-radius: 0.8em;
-                border: none;
-                cursor: pointer;
-            }
-
-            
-            .pomodoro_arrow{
-                position: relative;
-                top: 1em;
-                right: 16em;
-                background-color: #EFF1FA;
-                border: none;
-                cursor: pointer;
-            }
-
-            .short_arrow{
-                position: relative;
-                right: 6.2em;
-                top: -11.5em;
-                background-color: #EFF1FA;
-                border: none;
-                cursor: pointer;
-            }
-
-            .long_arrow{
-                position: relative;
-                right: -28em;
-                top: -18em;
-                background-color: #EFF1FA;
-                border: none;
-                cursor: pointer;
-            }
-
-            .two{
-                position: relative;
-                
-            }
-
-            .f1{
-                position: relative;
-                top: -11.2em;
-                left: 13em; 
-               
-            }
-    
-            .f2{
-                position: relative;
-                top: -14.2em;
-                left: 18.2em; 
-
-            }
-    
-            .f3{
-                position: relative;
-                top: -17.2em;
-                left: 23.5em; 
-            }
-
-            .three{
-                position: relative;
-                top: -14em;
-                left: -1.8em; 
-                width: 27.5em;
-               
-            }
-
-            .c1{
-                position: relative;
-                top: -18em;
-                left: 12.7em;  
-            }
-    
-            .c2{
-                position: relative;
-                top: -21em;
-                left: 18em;  
-            }
-    
-            .c3{
-                position: relative;
-                top: -24.2em;
-                left: 23.2em;
-            }
-
-            #change-colors{
-                position: relative;
-                left: 0em;
-                top: -14em;
-            }
-    
-            .apply-button{
-                position: relative;
-                top: 13em;
-                left: -2em;
-                
-            }
-
-            .start{
-                position: relative;
-            }
-
-            .main-container {
-                width: 100%;
-                height: 100vh;
-                position: relative;
-                top: -100em;
-                left: 0em;
-                left: 25.5em;
-                left: 50%;
-               transform: translate(-50%,-50%);
-                
-            }
-            
-            .circle-container {
-                width: 54em;
-                height: 54em;
-                background-color: white;
-                background-color: #ddd;
-                background-color: #252845;
-                border-radius: 50%;
-                position: relative;
-                z-index: 1;
-                overflow: hidden;
-            
-            }
-            
-            .semicircle {
-                width: 50%;
-                height: 100%;
-                position: absolute;
-                top: 0;
-                left: 0;
-                transform-origin: right center;
-                
-            }
-
-            #clock-bg2{
-                width: 54em;
-                height: 54em;
-                position: relative;
-                top: 2.6em;
-            }
-
-            .main-container {
-                position: relative;
-                top: -128.5em;
-                left: 50%;
-               }
-
-               
-
-            }
-
-    @media only screen and (max-width: 321px){
-
-    
-        #container{
-            max-width: 321px;
-           
-        }
-
-        #header{
-            color: #D7E0FF;
-            font-size: 35px;
-            padding: 1em 13em 0em 11em;
-           
-        }
-        
-        #spans{
-            width: 30em;
-            height: 4em;
-            background-color: #161932; 
-            border-radius: 40px;
-            margin: 1em 12.5em;
-            
-                }
-
-             
-        
-       #clock-bg{
-         width: 26em;
-         height: 26em;
-         border-radius: 50%;
-         position: relative;
-         background-color: #161932;
-         left: 140%;
-         top: 13.2em;
-         transform: translate(-50%,-50%);
-        }
-
-        .start{
+        .f1{
+            width: 6em;
+            height: 6em;
             position: relative;
-            top: -138em;
-        }
+            top: 20em;
+            left: 4em;
+            
+             }
 
-        #settings_icon{
-            margin: 3% 45% 1% 49%;
+        .f2{
+            width: 6em;
+            height: 6em;
+            border-radius: 50%; 
             position: relative;
-            top: .5em;
-            left: 15.5em;
+            top: 14em;
+            left: 14em;
             
         }
 
-
-        #settings-dashboard{
-            width: 26em;
-            height: 24em;
+        .f3{
+            width: 6em;
+            height: 6em;
             position: relative;
-            top: 6em;
-            left: 4.5em;
+            top: 8em;
+            left: 25em;
             
         }
-
-        #close_icon{
-            padding-left: 13.5em;
-            position: relative;
-            top: -1.1em;
-            }
-
-            .one{
-                position: relative;
-                top: -3.5em;
-            }
-
-            #time-text{
-                position: relative;
-                top: -2.5em;
-            }
-
-            .text1{
-                margin: 3em 1em;
-                position: relative;
-                top: -3em;
-                
-            }
-
-            .text2{
-                margin: -5.4em 11.2em;
-                opacity: 0.7;
-                position: relative;
-                top: -5em;
-                left: -2em;
-            }
-            .text3{
-                margin: -5.5em 22.2em;
-                opacity: 0.7;
-                position: relative;
-                top: -15.3em;
-                left: -3em;
-            }
-
-        #font-styles{
-            position: relative;
-            top: -8.5em;
-            left: -1em;
+    
+        input{
+            width: 13em;
+            height: 5em;
+            border-radius: 1;
+            
         }
-
-        .Text1{
-            margin : 0em 1em 0.5em 3em;
-            padding-left: 1em;
-              position: relative;
-              top: 1em;
-              right: 10em;
-              width: 7em;
-               
-              }
-            .Text2{
-                margin: 8em 1em 0em 12em;
-                padding-left: 1em;
-                position: relative;
-                top: -11.5em;
-                width: 7em;
-            }
-            .Text3{
-               margin: -2em 2em 1em 25em;
-                position: relative;
-                top: -15em;
-                padding-left: 1em;
-                width: 7em;
-            }
-
-            #pomo_doro{
-               width: 5em;
-               position: relative;
-               top: -1.6em;
-               margin-left: 3.5em;
-            }
-
-            #short_break{
-                width: 5em;
-                top: -14em;
-                left: -1.5em; 
-            }
-
-            #long_break{
-                width: 5em;
-                top: -17.5em;
-                left: -2.5em;
-            }
 
         .pomodoro_arrow{
-                position: relative;
-                top: -1.5em;
-                right: 15em;
-                background-color: #EFF1FA;
-                border: none;
-                cursor: pointer;
-            }
+            position: relative;
+            top: 1em;
+            right: 2em;
+            background-color: #EFF1FA;
+            border: none;
+            cursor: pointer;
+        }
 
-            .short_arrow{
-                position: relative;
-                right: 6.2em;
-                top: -14em;
-                background-color: #EFF1FA;
-                border: none;
-                cursor: pointer;
-            }
+        .short_arrow{
+            position: relative;
+            right: 6em;
+            top: -6em;
+            background-color: #EFF1FA;
+           
+            border: none;
+            cursor: pointer;
+        }
 
-            .long_arrow{
-                position: relative;
-                right: -25em;
-                top: -20.5em;
-                background-color: #EFF1FA;
-                border: none;
-                cursor: pointer;
-            }
+        .long_arrow{
+            position: relative;
+            right: 7.5em;
+            top: -4em;
+            background-color: #EFF1FA;
+            border: none;
+            cursor: pointer;
+            
+        }
 
-            .two{
-                position: relative;
-                top: -7em;
-                left: 4.8em;
-                width: 25.5em;
-            }
+        .arrow_up{
+            position: relative;
+            top: -0.5em;
+            left: 1.5em;
+            
+        }
 
-            #font-styles{
-                position: relative;
-                left: 8em;
-                top: -7em;
-            }
+        .arrow_down{
+            position: relative;
+            top: 0.5em;
+            right: -0.15em 
+        }
 
-            .f1{
-                position: relative;
-                top: -10.2em;
-                left: 21em; 
-               
-            }
-    
-            .f2{
-                position: relative;
-                top: -13.3em;
-                left: 26.2em; 
+        input .Text1{
+            cursor: pointer;
+        }
 
-            }
-    
-            .f3{
-                position: relative;
-                top: -16.2em;
-                left: 31em; 
-            }
+        .text1{
+            margin: 1em 3em;
+            opacity: 0.7;
+            top: 5em;
+            font-size: 1.8em
+        }
 
-            .three{
-                position: fix;
-                top: -13em;
-                left: 4.7em;
-                width: 25.5em; 
-                
-            }
+        .text2{
+            margin: -4.4em 3em;
+            opacity: 0.7;
+            position: relative;
+            top: 3em;
+            font-size: 1.8em
+            
+        }
+        .text3{
+            margin: -5.5em 3em;
+            opacity: 0.7;
+            position: relative;
+            top: -.5em;
+            font-size: 1.8em
+        }
 
-            .c1{
-                position: relative;
-                top: -17em;
-                left: 21em;  
-            }
-    
-            .c2{
-                position: relative;
-                top: -20em;
-                left: 26em;  
-            }
-    
-            .c3{
-                position: relative;
-                top: -23.2em;
-                left: 30.5em;
-            }
+        .Text1{
+          margin : 0em 1em 0.5em 3em;
+          padding-left: 1em;
+          position: relative;
+          top: 1em;
+          right: -3.5em;
+          
+          }
+        .Text2{
+            margin: 8em 1em 0em 28em;
+            padding-left: 1em;
+            position: relative;
+            top: -6em;
+            
+        }
+        .Text3{
+           margin: -2em 2em 1em 28em;
+            position: relative;
+            top: -3em;
+            padding-left: 1em;
+           
+        }
 
-            #change-colors{
-                position: relative;
-                left: 8em;
-                top: -13em;
-            }
-    
-            .apply-button{
-                position: relative;
-                top: 13em;
-                left: -2em;
-                
-            }
-
-            .start{
-                position: relative;
-            }
-
-            #apply{
-                margin-top: -18em;
-            }
+        #time-text{
+            padding: 0em 10em;
+            margin-top: -0.8em;
+            font-size: 1.3em;
+            
+        }
 
     }
-        
+    
+
+   
