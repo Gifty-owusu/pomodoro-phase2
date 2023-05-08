@@ -15,6 +15,8 @@ function colorC1(){
     document.getElementById("progressOne").style.background = "#F87070";
     document.getElementById("progressTwo").style.background = "#F87070";
     document.getElementById("apply").style.background = "#F87070";
+    document.getElementById("strokeFirst").style.background = "#F87070";
+    document.getElementById("progressThree").style.background = "#F87070";
 // identifier for active theme or background color
     window.colorOne = "#F87070";
 // overwriting the identifier for  active theme or background color  
@@ -32,21 +34,23 @@ function colorC1(){
 
    function colorC2(){
 // logic for setting colors of circle and the apply apply button background color
-    document.getElementById("apply").style.background = "#19c3c9";
-    document.getElementById("progressOne").style.background = "#19c3c9";
-    document.getElementById("progressTwo").style.background = "#19c3c9";
+    document.getElementById("apply").style.background = "#70F3F8";
+    document.getElementById("progressOne").style.background = "#70F3F8";
+    document.getElementById("progressTwo").style.background = "#70F3F8";
+    document.getElementById("strokeFirst").style.background = "#70F3F8";
+    document.getElementById("progressThree").style.background = "#70F3F8";
 // identifier for active theme or background color
-    window.colorTwo = "#19c3c9";
+    window.colorTwo = "#70F3F8";
 // overwriting the identifier for  active theme or background color 
     window.colorOne = "null";
     window.colorThree = "null";
-// logic forr setting the current  active theme to the active color "#19c3c9"
+// logic forr setting the current  active theme to the active color "#70F3F8"
     if (window.btnOneActive == "true"){
-    document.getElementById("pomodoro").style.background = "#19c3c9";
+    document.getElementById("pomodoro").style.background = "#70F3F8";
    }else if (window.btnTwoActive == "true"){
-    document.getElementById("short1").style.background = "#19c3c9";
+    document.getElementById("short1").style.background = "#70F3F8";
    }else if (window.btnThreeActive == "true"){
-    document.getElementById("long1").style.background = "#19c3c9";
+    document.getElementById("long1").style.background = "#70F3F8";
    };
     };
 
@@ -55,6 +59,8 @@ function colorC3(){
     document.getElementById("apply").style.background = "#D881F8";
     document.getElementById("progressOne").style.background = "#D881F8";
     document.getElementById("progressTwo").style.background = "#D881F8";
+    document.getElementById("strokeFirst").style.background = "#D881F8";
+    document.getElementById("progressThree").style.background = "#D881F8";
 // identifier for active theme or background color
     window.colorThree = "#D881F8";
 // overwriting the identifier for  active theme or background color
@@ -72,6 +78,9 @@ function colorC3(){
 
 //function for setting button colors and disabling the other colors onclick 
  function pomodoroOnclick(){
+    document.getElementById("pomodoro").style.color ="#1E213F";
+    document.getElementById("short1").style.color ="#D7E0FF";
+    document.getElementById("long1").style.color ="#D7E0FF";
 // identifier for active button 
     window.btnOneActive = "true";
 // overwriting the other buttons    
@@ -81,22 +90,20 @@ function colorC3(){
     localStorage.setItem("pomodoroSelected", "pomodoro-selected");
     localStorage.setItem("shortBreakSelected", "null");
     localStorage.setItem("longBreakSelected", "null");
-    document.getElementById("pomodoro").style.background = "#19c3c9";
+    document.getElementById("pomodoro").style.background = "#70F3F8";
     document.getElementById("long1").style.background = "#161932";
     document.getElementById("short1").style.background = "#161932";
     //reset();
     //restart();
 
-
-    
-//logic for setting color change for the first button
+    //logic for setting color change for the first button
     if (window.colorOne == "#F87070") {
         document.getElementById("pomodoro").style.background ="#F87070";
         document.getElementById("long1").style.background = "#161932";
         document.getElementById("short1").style.background = "#161932";  
     }
-    else if (window.colorTwo == "#19c3c9") {
-        document.getElementById("pomodoro").style.background = "#19c3c9";
+    else if (window.colorTwo == "#70F3F8") {
+        document.getElementById("pomodoro").style.background = "#70F3F8";
         document.getElementById("long1").style.background = "#161932";
         document.getElementById("short1").style.background = "#161932";
     } 
@@ -109,6 +116,9 @@ function colorC3(){
 };
 //function for setting button colors and disabling the other colors onclick
 function shortOnclick(){
+    document.getElementById("short1").style.color ="#1E213F";
+    document.getElementById("long1").style.color ="#D7E0FF";
+    document.getElementById("pomodoro").style.color ="#D7E0FF";
 // identifier for active button 
     window.btnTwoActive = "true";
 // overwriting the other buttons    
@@ -118,7 +128,7 @@ function shortOnclick(){
     localStorage.setItem("shortBreakSelected", "short-break-selected");
     localStorage.setItem("pomodoroSelected", "null");
     localStorage.setItem("longBreakSelected", "null");
-    document.getElementById("short1").style.background= "#19c3c9";
+    document.getElementById("short1").style.background= "#70F3F8";
     document.getElementById("pomodoro").style.background = "#161932";
     document.getElementById("long1").style.background = "#161932";
     //reset();
@@ -129,7 +139,7 @@ function shortOnclick(){
         document.getElementById("pomodoro").style.background = "#161932";
         document.getElementById("long1").style.background = "#161932";
     }else if (window.colorTwo == "#19c3c9") {
-        document.getElementById("short1").style.background= "#19c3c9";
+        document.getElementById("short1").style.background= "#70F3F8";
         document.getElementById("pomodoro").style.background = "#161932";
         document.getElementById("long1").style.background = "#161932";
     }else if (window.colorThree == "#D881F8") {
@@ -143,6 +153,9 @@ function shortOnclick(){
 };
 // function for setting button colors and disabling other colors onclick 
 function longOnclick(){
+document.getElementById("long1").style.color ="#1E213F";
+document.getElementById("short1").style.color ="#D7E0FF";
+document.getElementById("pomodoro").style.color ="#D7E0FF";
 // identifier for active buttons
 window.btnThreeActive = "true";
 // overwriting the other active button
@@ -152,7 +165,7 @@ window.btnTwoActive = "null";
  localStorage.setItem("longBreakSelected", "long-break-selected");
  localStorage.setItem("pomodoroSelected", "null");
  localStorage.setItem("shortBreakSelected", "null");
- document.getElementById("long1").style.background= "#19c3c9";
+ document.getElementById("long1").style.background= "#70F3F8";
  document.getElementById("pomodoro").style.background = "#161932";
  document.getElementById("short1").style.background= "#161932"; 
  reset();
@@ -162,8 +175,8 @@ window.btnTwoActive = "null";
     document.getElementById("long1").style.background= "#F87070";
     document.getElementById("pomodoro").style.background = "#161932";
     document.getElementById("short1").style.background= "#161932";
-    }else if (window.colorTwo == "#19c3c9"){
-        document.getElementById("long1").style.background= "#19c3c9"; 
+    }else if (window.colorTwo == "#70F3F8"){
+        document.getElementById("long1").style.background= "#70F3F8"; 
         document.getElementById("pomodoro").style.background = "#161932";
         document.getElementById("short1").style.background= "#161932";
     }else if(window.colorThree == "#D881F8"){
@@ -318,6 +331,8 @@ function apply() {
   var paused = false;
   
   function startCountdown() {
+    
+
     const pomoTime = window.progressValue;
     const shortTime = window.shortProgressValue;
     const longTime = window.longProgressValue;
@@ -351,6 +366,9 @@ function apply() {
           window.location.reload();
           paused = false;
         };
+
+        document.getElementById("strokeFirst").style.background = "#161932";
+        document.getElementById("progressThree").style.background = "#161932";
        
       }, 1000);
         progressIndicator();

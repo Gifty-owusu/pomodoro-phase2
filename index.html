@@ -7,12 +7,9 @@
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
 
   <link rel="stylesheet" href="timer.css">
-
+  <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
   
   <title>Frontend Mentor | Pomodoro app</title>
- <script
- src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js">
-</script>
 </head>
 <body> 
     <!-- Timer App -->
@@ -44,13 +41,13 @@
             <p id="stroke_circle" class="progress-bar progress-container">
                 <p id="stroke_circle2">
                     <p id ="stroke_cirle3">
-                      <div id="countdown">
+                     
                         <h1 id="minutes" class="time-min timer_minutes">00</h1>
                         <h1 class="time-colon">:</h1>
                         <h1 id="seconds" class="time-sec timer_seconds">00</h1>
-                      </div>
+                     
                       <div class="main-container center">
-                        <div class="circle-container center">
+                        <div class="circle-container center" id="strokeFirst">
                             <div class="semicircle" id="progressOne"></div> 
                             <div class="semicircle" id="progressTwo"></div> 
                             <div class="semicircle" id="progressThree"></div> 
@@ -138,9 +135,12 @@
     <p id="change-colors">
         <span>COLOR</span>
         <div class="colors-div">
-            <button class="c1" onclick ="colorC1()" id="color-one"></button>
+            <button class="c1" onclick ="colorC1()" id="color-one">
+            </button>
             <button class="c2" onclick="colorC2()"  id="color-two"></button>
             <button class="c3" onclick="colorC3()"  id="color-three"></button>
+           
+                
         </div>
     </p>
     
