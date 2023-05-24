@@ -20,13 +20,13 @@
         </div>
         <p id="spans" >
           
-        <button  class="options pomoOption" id="pomodoro" onclick="pomodoroOnclick()">
+        <button  class="options" id="pomodoro" onclick="pomodoroOnclick()">
             pomodoro
         </button>
-        <button class="options shortOption" id="short1" onclick="shortOnclick()">
+        <button class="options" id="short1" onclick="shortOnclick()">
             short break
         </button>
-        <button class="options longOption" id="long1" onclick="longOnclick()">
+        <button class="options" id="long1" onclick="longOnclick()">
             long break
         </button>
     </span>
@@ -42,15 +42,17 @@
                 <p id="stroke_circle2">
                     <p id ="stroke_cirle3">
                      
-                        <h1 id="minutes" class="time-min timer_minutes">00</h1>
-                        <h1 class="time-colon">:</h1>
-                        <h1 id="seconds" class="time-sec timer_seconds">00</h1>
-                     
+                        <p class="time-container">
+                        <span id="minutes" class="time-min timer_minutes">00</span>
+                        <span class="time-colon">:</span>
+                        <span id="seconds" class="time-sec timer_seconds">00</span>
+                        </p>
+                        
                       <div class="main-container center">
-                        <div class="circle-container center" id="strokeFirst">
-                            <div class="semicircle" id="progressOne"></div> 
-                            <div class="semicircle" id="progressTwo"></div> 
-                            <div class="semicircle" id="progressThree"></div> 
+                        <div class="circle-container center circle" id="strokeFirst">
+                            <div class="semicircle circle" id="progressOne"></div> 
+                            <div class="semicircle circle" id="progressTwo"></div> 
+                            <div class="semicircle circle" id="progressThree"></div> 
                             <div class="outermost-circle"></div>
                         </div>
                     </div>
@@ -149,6 +151,8 @@
 
     <a href="#settings"></a>
   </div>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
 
 

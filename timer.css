@@ -10,6 +10,7 @@ body{
     font-family: 'Kumbh Sans';
 } 
 
+
 #container{
     text-align: center;
     }
@@ -23,6 +24,7 @@ body{
 
     }
 
+   
     .options{
         height: 3.5em;
         width: 8em;
@@ -36,6 +38,21 @@ body{
         background-color: #161932;
         margin-top: .6em;
         }
+
+        .optionsPomo{
+            height: 3.5em;
+            width: 8em;
+            position: relative;
+            color: #D7E0FF;
+            border-radius: 40px;
+            border: none;
+            z-index: 6;
+            font-weight: 700;
+            cursor: pointer;
+            background-color: #F87070;
+            margin-top: .6em;
+            }
+    
 
      #clock-bg{
             width: 25em;
@@ -87,8 +104,9 @@ body{
             margin: auto;
             position: relative;
             top: -3.5em;
-            left: 1.2em;
+            left: 1.4em;
             z-index: 5;
+            font-weight: 400;
          }
 
         .time-colon{
@@ -96,10 +114,11 @@ body{
             color: #D7E0FF;
             margin: auto;
             position: relative;
-            top: -4.1em;
-            left: 2.1em;
+            top: -2.9em;
+            left: 1em;
             z-index: 5;
             font-size: 5.5em;
+            font-weight: 400;
         }
 
         .time-sec{
@@ -107,10 +126,11 @@ body{
             color: #D7E0FF;
             margin: auto;
             position: relative;
-            top: -6.2em;
-            left: 3em;
+            top: -3.5em;
+            left: 1.1em;
             z-index: 5;
             font-size: 4.5em;
+            font-weight: 400;
         }
 
         .start{
@@ -118,7 +138,8 @@ body{
             letter-spacing: 0.5em;
             position: relative;
             left: 10.2em;
-            top: -31em;
+            right: 2em;
+            top: -18em;
             cursor: pointer;
             background-color: transparent;
             border: none;
@@ -133,20 +154,19 @@ body{
             letter-spacing: 0.5em; 
             cursor: pointer;
         }
-        .restart{
+        #restart{
             color: #fff;
-            letter-spacing: 0.5em; 
-            cursor: pointer;   
+            letter-spacing: 1em; 
+            cursor: pointer;  
+            left: 9em;
+            position: relative;
         }
 
-        
-
-        #settings_icon{
+         #settings_icon{
             margin: 3% 45% 1% 49%;
             position: relative;
-            top: 2em;
+            top: -1em;
             left: -.1em;
-            
         }
 
         #settings{
@@ -166,18 +186,16 @@ body{
             margin: auto;
             position: relative;
             right: 14em;
-         
             }
 
-            #settings-text{
+        #settings-text{
                 font-size: 1.5em;
                 font-family: sans-serif;
                 font-weight: 600;
                 padding: 1em 1.5em;
-                
             }
 
-            #close_icon{
+        #close_icon{
                 padding-left: 12em;
                 }
 
@@ -186,15 +204,15 @@ body{
                 top: -1.5em;
             }
 
-            #time-text{
+        #time-text{
                 padding: 0em 1.9em;
                 margin-top: -0.8em;
                 letter-spacing: 8.23077px;
                 font-size: 0.85em;
                 font-weight: 600;
-            }
+                }
 
-            input{
+        input{
                 width: 8em;
                 height: 2.5em;
                 border-radius: 0.8em;
@@ -308,10 +326,10 @@ body{
                 width: 3em;
                 height: 3em;
                 border-radius: 50%;
-                background-color: #EFF1FA; 
+                /*background-color: #EFF1FA; */
                 position: relative;
                 top: -18em;
-                left: 7em;
+                left: 5em;
                 border: none;
                 cursor: pointer;
                  }
@@ -324,20 +342,20 @@ body{
                 background-color: #EFF1FA; 
                 position: relative;
                 top: -18em;
-                left: 9em;
+                left: 7em;
                 border: none;
                 cursor: pointer;
             }
 
             .f3{
-                font-family: 'Space Mono', monospace;
+                font-family: 'Space Mono';
                 width: 3em;
                 height: 3em;
                 border-radius: 50%;
                 background-color: #EFF1FA;
                 position: relative;
                 top: -18em;
-                left: 11em;
+                left: 9em;
                 border: none;
                 cursor: pointer;
                 
@@ -366,7 +384,7 @@ body{
                 background-color: #F87070; 
                 position: relative;
                 top: -18em;
-                left: 7em;
+                left: 5em;
                 border: none;
                 cursor: pointer;
                  }
@@ -379,7 +397,7 @@ body{
                     border: none;
                     position: relative;
                     top: -18em;
-                    left: 9em;
+                    left: 7em;
                     cursor: pointer;
                 }
 
@@ -390,7 +408,7 @@ body{
                     background-color: #D881F8;
                     position: relative;
                     top: -18em;
-                    left: 11em;
+                    left: 9em;
                     border: none;
                     cursor: pointer;
                 }
@@ -405,12 +423,10 @@ body{
                     margin-top: -15em;
                     margin-left: 12em;
                     position: relative;
-                    top: 16em;
+                    top: 15em;
                     z-index: 0;
                     cursor: pointer;
                 }
-
-
 
                 .hide_btn {
                     display: none;
@@ -424,7 +440,49 @@ body{
                 .Restart {
                     display: none;
                 }
-                
+
+                .default-font-bg-color{
+                    background-color: #EFF1FA;
+                }
+
+                .bg-default{
+                    background-color: #161932;
+                }
+
+                .default-font-color{
+                    color: #000;
+                }
+
+                .selected-font-color{
+                    color: #fff;
+                }
+
+                .initial-color{
+                    background-color: #70F3F8;
+                }
+
+                .first-color-display{
+                    background-color: #F87070; 
+                    
+                }
+                .second-color-display{
+                    background-color: #70F3F8;
+                }
+                .third-color-display{
+                    background-color: #D881F8;  
+                }
+                .DefaultColor{
+                    background-color: #161932;
+                }
+                .DisplayF1{
+                    font-family: 'Kumbh Sans';
+                }
+                .DisplayF2{
+                    font-family: 'Roboto Slab', serif;
+                }
+                .DisplayF3{
+                    font-family: 'Space Mono';
+                }
                 /* css for new progress bar */
         
             .center {
@@ -478,9 +536,17 @@ body{
 
                .start{
                 position: relative;
-                top: -31em;
+                top: -17em;
                 left: 8em;
                }
+
+               #restart{
+                color: #fff;
+                letter-spacing: .9em; 
+                cursor: pointer;  
+                left: 7em;
+                position: relative;
+            }
 
                #clock-bg{
                 width: 21em;
@@ -522,20 +588,20 @@ body{
                  }
         
                 .time-colon{
-                    top: -3.8em;
-                    left: 1.8em;
+                    top: -2.65em;
+                    left: 0.7em;
                   
                 }
         
                 .time-sec{
-                    top: -5.9em;
-                    left: 2.5em;
+                    top: -3.2em;
+                    left: .7em;
                     z-index: 5;
                     font-size: 4.5em;
                 }
             
                 #settings_icon{
-                    top: -0em;
+                    top: -1em;
                 }
            
             #settings-dashboard{
@@ -632,7 +698,7 @@ body{
 
         .apply-button{
             position: relative;
-            top: 14em;
+            top: 13em;
             left: -3em;
         }
     }
@@ -708,97 +774,95 @@ body{
         }
 
         #header{
-            margin-left: 5em;
+            margin-left: 0em;
             margin-right: -5em;
         }
 
         #spans{
-            margin-right: -8em;
-            margin-left: 6em;
+            margin-right: -12em;
+            margin-left: 3em;
            
         }
 
        .start{
-            top: -30em;
+            top: -16.5em;
         }
 
         #clock-bg{
-            left: 17em;
+            left: 15em;
             top: 12em;
         }
 
         #settings_icon{
             top: 3em;
-            padding-left: 4em;
+            padding-left: 2em;
         }
 
         #settings-dashboard{
-        width: 30em;
-        height: 43em;
+        width: 26em;
+        height: 34em;
         top: 2em;
         position: fixed;
-        left: 5em;
+        left: 3em;
     }
 
     #close_icon{
-        padding-left: 10em;
+        padding-left: 7em;
         }
 
         #time-text{
-            margin-left: 8em;
+            margin-left: 6em;
         }
 
         .three{
-            left: -4.9em;
-            top: 22em;
+            left: -8.9em;
+            top: 17.5em;
         }
 
         #change-colors{
             position: relative;
-            top: 19.5em; 
-            right: -5em;
-            font-size: 1.1em;
+            top: 17em; 
+            right: -1em;
+            font-size: 1em;
             letter-spacing: 4.23077px;
         }
 
         .c1{
             position: relative;
-            top:  25.8em;
-            left: .5em;
-            width: 4em;
-            height: 4em; 
+            top:  19em;
+            left: -4.5em;
+            width: 3.5em;
+            height: 3.5em; 
         }
 
         .c2{
             position: relative;
-            top:  21.5em;
-            left: 7.9em;
-            width: 4em;
-            height: 4em; 
+            top:  15.5em;
+            left: 2.9em;
+            width: 3.5em;
+            height: 3.5em; 
         }
 
         .c3{
             position: relative;
-            top:  17.3em;
-            left: 15em;
-            width: 4em;
-            height: 4em;
+            top:  11.5em;
+            left: 10em;
+            width: 3.5em;
+            height: 3.5em;
         }
 
         .apply-button{
-            top: 6em;
+            top: .1em;
             left: -3em;
-            width: 8.5em;
+            width: 6.5em;
             height: .1em;
-            padding-top: 4em;
+            padding-top: 3em;
             padding-left: -5em;
             margin-top: 1.5em;
-            
-            
-        }
+            }
 
         #applyID{
-            font-size: 1.6em;
+            font-size: 1.4em;
             position: absolute;
             top: .6em;
             left: 1.4em;
@@ -806,50 +870,48 @@ body{
 
         .two{
             position: relative;
-            top: 30em;
+            top: 24.5em;
             right: 12em;
-            left: -4.9em;
+            left: -8.5em;
         }
 
         #font-styles{
-            font-size: 1.1em;
+            font-size: 1em;
             position: relative;
-            top: 27em; 
-            right: -5em;
-            
-        }
+            top: 24em; 
+            right: -1em;
+            }
 
         .f1{
-            width: 4em;
-            height: 4em;
+            width: 3.5em;
+            height: 3.5em;
             position: relative;
-            top: 35em;
-            left: .5em;
+            top: 28em;
+            left: -4.5em;
             
              }
 
         .f2{
-            width: 4em;
-            height: 4em;
+            width: 3.5em;
+            height: 3.5em;
             border-radius: 50%; 
             position: relative;
-            top: 31em;
-            left: 8em;
-            
-        }
+            top: 24.5em;
+            left: 3em;
+            }
 
         .f3{
-            width: 4em;
-            height: 4em;
+            width: 3.5em;
+            height: 3.5em;
             position: relative;
-            top: 27em;
-            left: 15em;
+            top: 21em;
+            left: 10em;
             
         }
     
         input{
-            width: 12em;
-            height: 4em;
+            width: 8em;
+            height: 3em;
             border-radius: 1em;
             
         }
@@ -862,23 +924,23 @@ body{
             margin: 1em 2em;
             opacity: 0.7;
             top: 5em;
-            font-size: 1.3em;
+            font-size: 1.1em;
         }
 
         .text2{
             margin: -4.4em 2em;
             opacity: 0.7;
             position: relative;
-            top: 2em;
-            font-size: 1.3em;
+            top: 1em;
+            font-size: 1.1em;
             
         }
         .text3{
             margin: -5.5em 2em;
             opacity: 0.7;
             position: relative;
-            top: -4em;
-            font-size: 1.3em;
+            top: -7em;
+            font-size: 1.1em;
         }
 
         .Text1{
@@ -895,78 +957,145 @@ body{
             }
             
         .Text2{
-            margin: 8em 1em 0em 20.5em;
+            margin: 8em 1em 0em 18.5em;
             padding-left: 1em;
             position: relative;
-            top: -8em;
+            top: -9em;
             }
         .short_arrow{
-            left: 29.5em;
+            left: 23.5em;
             top: -11em;
             }
 
         .Text3{
-           margin: -2em 2em 1em 20.3em;
+           margin: -2em 2em 1em 18.5em;
             position: relative;
-            top: -8em;
+            top: -10.5em;
             padding-left: 1em;
            
         }
         .long_arrow{
-            top: -12em;
-            left: 29em; 
+            top: -14em;
+            left: 23.5em; 
         }
+}
 
-        
-
-    }
-
-    @media only screen and  (max-width: 376px){
+@media only screen and  (max-width: 376px){
         #settings-dashboard{
-            height: 47em;
+            height: 37em;
+            left: 2em;
         }  
 
         #header{
-            margin-left: 6em;
+            margin-left: 0em;
             margin-right: -7em;
         }
 
         
         #settings_icon{
             top: 5em;
-            padding-left: 5.5em;
+            padding-left: 3.5em;
         }
 
         .apply-button{
-            top: 10em;
+            top: 3em;
         }
 
         .c1{
-            top: 30em;
+            top: 21em;
         }
 
         .c2{
-            top: 25.5em;
+            top: 17.5em;
         }
 
         .c3{
-            top: 21.5em;
+            top: 13.5em;
+        }
+
+        #change-colors{
+            top: 18em;
+        }
+
+        .three{
+            top: 18em;
+            left: -8em;
+        }
+
+        .two{
+            left: -8em;
+        }
+
+        #clock-bg{
+            left: 14em;
+            top: 12em;
+        }
+    }
+    
+    @media only screen and  (max-width: 321px){
+        #header{
+            margin-left: 0em;
+            margin-right: -11em;
+        }
+
+        .three{
+            top: 22em;
+            left: -7em;
+        }
+
+        .two{
+            left: -7em;
+            top: 27em;
+        }
+
+        #settings-dashboard{
+            height: 42em;
+            left: 2em;
+            top: 4em;
+        }  
+
+        .c1{
+            top: 28em;
+            left: -2em;
+        }
+
+        .c2{
+            top: 24.5em;
+            left: 5em;
+        }
+
+        .c3{
+            top: 21em;
+            left: 12em;
         }
 
         #change-colors{
             top: 22em;
+            left: 3em;
+        }
+        .apply-button{
+            top: 8em;
         }
 
-        .three{
-            top: 24em;
-            left: -3em;
+        .f1{
+            top: 32em;
+            left: -2.5em;
         }
 
-        .two{
-            left: -3em;
+        .f2{
+            top: 29em;
+            left: 5em;
+        }
+
+        .f3{
+            top: 25.5em;
+            left: 12.5em;
+        }
+
+        #font-styles{
+            top: 27em;
+            left: 3em;
         }
 
     }
-    
-
    

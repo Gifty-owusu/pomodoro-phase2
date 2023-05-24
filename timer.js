@@ -1,66 +1,101 @@
-//trying closing button
-function closeDashboard(){
+/// Variable declarations for the elements to modify the background color
+const circles = document.getElementsByClassName("circle");
+const applyButton = document.getElementById("apply");
+const pomodoroButton = document.getElementById("pomodoro");
+const longButton = document.getElementById("long1");
+const shortButton = document.getElementById("short1");
+const firstFont = document.getElementById("fontOne");
+const secondFont = document.getElementById("fontTwo");
+const thirdFont = document.getElementById("fontThree");
+const FirstColorSelected = document.getElementById("color-one");
+
+window.bodytag = document.querySelector('body');
+
+
+// functions for opening and closing the settings dashboard
+const closeDashboard = () => {
     document.getElementById("settings").style.display = "none";
 };
-
-function displayDashboard(){
-    document.getElementById("settings").style.display = "block"
-    
+const displayDashboard = () => {
+    document.getElementById("settings").style.display = "block";
 };
 
+// Functions for clearing initial or selected color options for pomodoro, short, and long break buttons
+const clearFirstColor = () => {
+    applyButton.classList.remove("first-color-display");
+    pomodoroButton.classList.remove("first-color-display");
+    longButton.classList.remove("first-color-display");
+    shortButton.classList.remove("first-color-display");
+};
+const clearSecondColor = () => {
+    applyButton.classList.remove("second-color-display");
+    pomodoroButton.classList.remove("second-color-display");
+    longButton.classList.remove("second-color-display");
+    shortButton.classList.remove("second-color-display");
+};
+const clearThirdColor = () => {
+    applyButton.classList.remove("third-color-display");
+    pomodoroButton.classList.remove("third-color-display");
+    longButton.classList.remove("third-color-display");
+    shortButton.classList.remove("third-color-display");
+};
 
 //functions for changing the color of the timer options
-function colorC1(){
+const colorC1 = () =>{
+        clearSecondColor();
+        clearThirdColor();
 // logic for setting colors of circle and the apply apply button background color
-    document.getElementById("progressOne").style.background = "#F87070";
-    document.getElementById("progressTwo").style.background = "#F87070";
-    document.getElementById("apply").style.background = "#F87070";
-    document.getElementById("strokeFirst").style.background = "#F87070";
-    document.getElementById("progressThree").style.background = "#F87070";
-// identifier for active theme or background color
+    for (let i = 0; i < circles.length; i++) {
+        circles[i].style.backgroundColor = "#F87070";
+    }
+    applyButton.classList.add("first-color-display");
+    
+    // identifier for active theme or background color
     window.colorOne = "#F87070";
 // overwriting the identifier for  active theme or background color  
     window.colorTwo = "null";
     window.colorThree = "null";
-// logic forr setting the current  active theme to the active color ##F87070    
+// logic forr setting the current  active theme to the active color 'first-color-display'  
     if(window.btnOneActive == "true"){
-        document.getElementById("pomodoro").style.background = "#F87070";
+        pomodoroOnclick();
     }else if (window.btnTwoActive == "true"){
-        document.getElementById("short1").style.background = "#F87070";
+        shortOnclick();
     }else if (window.btnThreeActive == "true"){
-        document.getElementById("long1").style.background = "#F87070";
+        longOnclick();
     };
      };
 
-   function colorC2(){
+const colorC2 = () =>{
+        clearFirstColor();
+        clearThirdColor();
 // logic for setting colors of circle and the apply apply button background color
-    document.getElementById("apply").style.background = "#70F3F8";
-    document.getElementById("progressOne").style.background = "#70F3F8";
-    document.getElementById("progressTwo").style.background = "#70F3F8";
-    document.getElementById("strokeFirst").style.background = "#70F3F8";
-    document.getElementById("progressThree").style.background = "#70F3F8";
-// identifier for active theme or background color
-    window.colorTwo = "#70F3F8";
-// overwriting the identifier for  active theme or background color 
-    window.colorOne = "null";
-    window.colorThree = "null";
-// logic forr setting the current  active theme to the active color "#70F3F8"
-    if (window.btnOneActive == "true"){
-    document.getElementById("pomodoro").style.background = "#70F3F8";
-   }else if (window.btnTwoActive == "true"){
-    document.getElementById("short1").style.background = "#70F3F8";
-   }else if (window.btnThreeActive == "true"){
-    document.getElementById("long1").style.background = "#70F3F8";
-   };
+    for (let i = 0; i < circles.length; i++) {
+        circles[i].style.backgroundColor = "#70F3F8";
+    }
+    applyButton.classList.add("second-color-display");
+    // identifier for active theme or background color
+         window.colorTwo = "#70F3F8";
+    // overwriting the identifier for  active theme or background color 
+        window.colorOne = "null";
+        window.colorThree = "null";
+    // logic forr setting the current  active theme to the active color "#70F3F8"
+        if (window.btnOneActive == "true"){
+            pomodoroOnclick();
+        }else if (window.btnTwoActive == "true"){
+            shortOnclick();
+        }else if (window.btnThreeActive == "true"){
+            longOnclick();
+        };
     };
 
-function colorC3(){
+const colorC3 = () =>{
+    clearFirstColor();
+    clearSecondColor();
 // logic for setting colors of circle and the apply apply button background color
-    document.getElementById("apply").style.background = "#D881F8";
-    document.getElementById("progressOne").style.background = "#D881F8";
-    document.getElementById("progressTwo").style.background = "#D881F8";
-    document.getElementById("strokeFirst").style.background = "#D881F8";
-    document.getElementById("progressThree").style.background = "#D881F8";
+for (let i = 0; i < circles.length; i++) {
+    circles[i].style.backgroundColor = "#D881F8";
+}
+applyButton.classList.add("third-color-display");
 // identifier for active theme or background color
     window.colorThree = "#D881F8";
 // overwriting the identifier for  active theme or background color
@@ -68,57 +103,74 @@ function colorC3(){
     window.colorOne = "null";
 // logic forr setting the current active theme to the active color "#D881F8"
     if (window.btnOneActive == "true"){
-        document.getElementById("pomodoro").style.background = "#D881F8";
+         pomodoroOnclick();
     }else if (window.btnTwoActive == "true"){
-        document.getElementById("short1").style.background = "#D881F8";
+        shortOnclick();
     }else if (window.btnThreeActive == "true"){
-        document.getElementById("long1").style.background = "#D881F8";
+        longOnclick();
     };
-};
+    };
 
 //function for setting button colors and disabling the other colors onclick 
- function pomodoroOnclick(){
-    document.getElementById("pomodoro").style.color ="#1E213F";
-    document.getElementById("short1").style.color ="#D7E0FF";
-    document.getElementById("long1").style.color ="#D7E0FF";
+ const pomodoroOnclick = () =>{
+// Adding and removing pomodoro timer option initial font colors
+    pomodoroButton.classList.add("default-font-color");
+    longButton.classList.add("selected-font-color");
+    shortButton.classList.add("selected-font-color");
+
+    pomodoroButton.classList.remove("selected-font-color");
+    longButton.classList.remove("default-font-colo");
+    shortButton.classList.remove("default-font-colo");
 // identifier for active button 
     window.btnOneActive = "true";
 // overwriting the other buttons    
     window.btnTwoActive = "null";
     window.btnThreeActive = "null";
-    //setting pomodoro buttons to get the values from the pomodoro input using local storage
+//setting pomodoro buttons to get the values from the pomodoro input using local storage
     localStorage.setItem("pomodoroSelected", "pomodoro-selected");
     localStorage.setItem("shortBreakSelected", "null");
     localStorage.setItem("longBreakSelected", "null");
-    document.getElementById("pomodoro").style.background = "#70F3F8";
-    document.getElementById("long1").style.background = "#161932";
-    document.getElementById("short1").style.background = "#161932";
-    //reset();
-    //restart();
-
-    //logic for setting color change for the first button
+// Adding and removing pomodor timer option initial background colors
+    pomodoroButton.classList.add("initial-color");
+    longButton.classList.remove("initial-color");
+    shortButton.classList.remove("initial-color");
+    shortButton.classList.add("bg-default");
+    longButton.classList.add("bg-default");
+//logic for setting color options for the pomodoro timer options
     if (window.colorOne == "#F87070") {
-        document.getElementById("pomodoro").style.background ="#F87070";
-        document.getElementById("long1").style.background = "#161932";
-        document.getElementById("short1").style.background = "#161932";  
-    }
+        //pomodoroButton.classList.remove("initial-color");
+        //pomodoroButton.classList.remove("bg-default");
+        longButton.classList.remove("first-color-display");
+        shortButton.classList.remove("first-color-display");
+
+        pomodoroButton.classList.add("first-color-display");
+        longButton.classList.add("bg-default");
+        shortButton.classList.add("bg-default");
+     }
     else if (window.colorTwo == "#70F3F8") {
-        document.getElementById("pomodoro").style.background = "#70F3F8";
-        document.getElementById("long1").style.background = "#161932";
-        document.getElementById("short1").style.background = "#161932";
+        
     } 
     else if (window.colorThree == "#D881F8") {
-        document.getElementById("pomodoro").style.background ="#D881F8";
-        document.getElementById("long1").style.background = "#161932";
-        document.getElementById("short1").style.background = "#161932";
+        longButton.classList.remove("third-color-display");
+        shortButton.classList.remove("third-color-display");
+
+        pomodoroButton.classList.add("third-color-display");
+        longButton.classList.add("bg-default");
+        shortButton.classList.add("bg-default");
     };
     
 };
 //function for setting button colors and disabling the other colors onclick
-function shortOnclick(){
-    document.getElementById("short1").style.color ="#1E213F";
-    document.getElementById("long1").style.color ="#D7E0FF";
-    document.getElementById("pomodoro").style.color ="#D7E0FF";
+const shortOnclick = () =>{
+// Adding and removing short break timer option initial font colors
+    pomodoroButton.classList.add("selected-font-color");
+    longButton.classList.add("selected-font-color");
+    shortButton.classList.add("default-font-color");
+
+    shortButton.classList.remove("selected-font-color");
+    longButton.classList.remove("default-font-color");
+    pomodoroButton.classList.remove("default-font-color");
+    
 // identifier for active button 
     window.btnTwoActive = "true";
 // overwriting the other buttons    
@@ -128,222 +180,216 @@ function shortOnclick(){
     localStorage.setItem("shortBreakSelected", "short-break-selected");
     localStorage.setItem("pomodoroSelected", "null");
     localStorage.setItem("longBreakSelected", "null");
-    document.getElementById("short1").style.background= "#70F3F8";
-    document.getElementById("pomodoro").style.background = "#161932";
-    document.getElementById("long1").style.background = "#161932";
-    //reset();
-    //restart();
+// Adding and removing short break initial colors
+    pomodoroButton.classList.remove("initial-color");
+    longButton.classList.remove("initial-color");
+    shortButton.classList.add("initial-color");
+    pomodoroButton.classList.add("bg-default");
+    longButton.classList.add("bg-default");
+
 //logic for setting color change for the second button
     if (window.colorOne == "#F87070") {
-        document.getElementById("short1").style.background= "#F87070";
-        document.getElementById("pomodoro").style.background = "#161932";
-        document.getElementById("long1").style.background = "#161932";
+        longButton.classList.remove("first-color-display");
+        pomodoroButton.classList.remove("first-color-display");
+
+        shortButton.classList.add("first-color-display");
+        longButton.classList.add("bg-default");
+        pomodoroButton.classList.add("bg-default");
+
     }else if (window.colorTwo == "#19c3c9") {
-        document.getElementById("short1").style.background= "#70F3F8";
-        document.getElementById("pomodoro").style.background = "#161932";
-        document.getElementById("long1").style.background = "#161932";
+        
+
     }else if (window.colorThree == "#D881F8") {
-        document.getElementById("short1").style.background= "#D881F8";
-        document.getElementById("pomodoro").style.background = "#161932";
-        document.getElementById("long1").style.background = "#161932";
+        longButton.classList.remove("third-color-display");
+        pomodoroButton.classList.remove("third-color-display");
+
+        shortButton.classList.add("third-color-display");
+        longButton.classList.add("bg-default");
+        pomodoroButton.classList.add("bg-default");
     };
-
-
-
 };
+
 // function for setting button colors and disabling other colors onclick 
-function longOnclick(){
-document.getElementById("long1").style.color ="#1E213F";
-document.getElementById("short1").style.color ="#D7E0FF";
-document.getElementById("pomodoro").style.color ="#D7E0FF";
+const longOnclick = () =>{
+    pomodoroButton.classList.add("selected-font-color");
+    longButton.classList.add("default-font-color");
+    shortButton.classList.add("selected-font-color");
+
+    longButton.classList.remove("selected-font-color");
+    pomodoroButton.classList.remove("default-font-color");
+    shortButton.classList.remove("default-font-color");
 // identifier for active buttons
-window.btnThreeActive = "true";
+    window.btnThreeActive = "true";
 // overwriting the other active button
-window.btnOneActive = "null";
-window.btnTwoActive = "null";
+    window.btnOneActive = "null";
+    window.btnTwoActive = "null";
  //setting long break buttons to get the values from the long break input using local storage
- localStorage.setItem("longBreakSelected", "long-break-selected");
- localStorage.setItem("pomodoroSelected", "null");
- localStorage.setItem("shortBreakSelected", "null");
- document.getElementById("long1").style.background= "#70F3F8";
- document.getElementById("pomodoro").style.background = "#161932";
- document.getElementById("short1").style.background= "#161932"; 
- reset();
- //restart();
+    localStorage.setItem("longBreakSelected", "long-break-selected");
+    localStorage.setItem("pomodoroSelected", "null");
+    localStorage.setItem("shortBreakSelected", "null");
+// Adding and removing long break initial colors
+    pomodoroButton.classList.remove("initial-color");
+    shortButton.classList.remove("initial-color");
+    longButton.classList.add("initial-color");
+    pomodoroButton.classList.add("bg-default");
+    shortButton.classList.add("bg-default");
+ 
 // logic for setting color change for the third button
     if (window.colorOne == "#F87070"){
-    document.getElementById("long1").style.background= "#F87070";
-    document.getElementById("pomodoro").style.background = "#161932";
-    document.getElementById("short1").style.background= "#161932";
+        shortButton.classList.remove("first-color-display");
+        pomodoroButton.classList.remove("first-color-display");
+
+        longButton.classList.add("first-color-display");
+        shortButton.classList.add("bg-default");
+        pomodoroButton.classList.add("bg-default");
+
     }else if (window.colorTwo == "#70F3F8"){
-        document.getElementById("long1").style.background= "#70F3F8"; 
-        document.getElementById("pomodoro").style.background = "#161932";
-        document.getElementById("short1").style.background= "#161932";
+        
+
     }else if(window.colorThree == "#D881F8"){
-        document.getElementById("long1").style.background = "#D881F8";
-        document.getElementById("pomodoro").style.background = "#161932";
-        document.getElementById("short1").style.background= "#161932";
+        shortButton.classList.remove("third-color-display");
+        pomodoroButton.classList.remove("third-color-display");
+
+        longButton.classList.add("third-color-display");
+        shortButton.classList.add("bg-default");
+        pomodoroButton.classList.add("bg-default");
     };
+};
+
+const clear1 = () =>{
+    bodytag.classList.remove('DisplayF1');
+};
+
+const clear2 = () =>{
+    bodytag.classList.remove('DisplayF2');
+};
+
+const clear3 = () =>{
+    bodytag.classList.remove('DisplayF3');
 };
 
 //functions for changing font styles of the timer options
-function fontF1(){
-    // selected font style "identifier for selected font".
-    document.getElementById("fontOne").style.background = "#161932";
-    document.getElementById("fontOne").style.color = "#fff";
-    document.getElementById("fontTwo").style.background = "#EFF1FA";
-    document.getElementById("fontThree").style.background = "#EFF1FA";
-    document.getElementById("fontTwo").style.color = "#000";
-    document.getElementById("fontThree").style.color = "#000";
-    //document.getElementById("f1-border").style.borderColor = "red";
-    document.getElementById("pomodoro").style.fontFamily = "'Kumbh Sans', sans-serif";
-    document.getElementById("short1").style.fontFamily = "'Kumbh Sans', sans-serif";
-    document.getElementById("long1").style.fontFamily = "'Kumbh Sans', sans-serif";
-    document.getElementById("minutes").style.fontFamily = "'Kumbh Sans', sans-serif";
-    document.getElementById("seconds").style.fontFamily = "'Kumbh Sans', sans-serif";
-    document.getElementById("srp").style.fontFamily = "'Kumbh Sans', sans-serif";
-    document.getElementById("settings-text").style.fontFamily = "'Kumbh Sans', sans-serif";
-    document.getElementById("time-text").style.fontFamily = "'Kumbh Sans', sans-serif";
-    document.getElementById("font-styles").style.fontFamily = "'Kumbh Sans', sans-serif";
-    document.getElementById("change-colors").style.fontFamily = "'Kumbh Sans', sans-serif";
+const fontF1 = () =>{
+    clear2();
+    clear3();
+// selected font style "identifier for selected font".
+    firstFont.classList.add("bg-default");
+    firstFont.classList.add("selected-font-color")
+    secondFont.classList.remove("bg-default");
+    secondFont.classList.add("default-font-bg-color");
+    secondFont.classList.remove("selected-font-color")
+    secondFont.classList.add("default-font-color")
+    thirdFont.classList.add("default-font-color");
+    thirdFont.classList.remove("selected-font-color")
+    thirdFont.classList.remove("bg-default");
+    thirdFont.classList.add("default-font-bg-color");
+
+// Add the "DisplayF1" class to the body element
+    bodytag.classList.add("DisplayF1");
 }
 
-function fontF2(){
+const fontF2 = () =>{
+    clear1();
+    clear3();
     // selected font style "identifier for selected font".
-    document.getElementById("fontTwo").style.background = "#161932";
-    document.getElementById("fontTwo").style.color = "#fff";
-    document.getElementById("fontOne").style.background = "#EFF1FA";
-    document.getElementById("fontThree").style.background = "#EFF1FA";
-    document.getElementById("fontThree").style.color = "#000";
-    document.getElementById("fontOne").style.color = "#000";
-    document.getElementById("pomodoro").style.fontFamily = "'Roboto Slab', serif";
-    document.getElementById("short1").style.fontFamily = "'Roboto Slab', serif";
-    document.getElementById("long1").style.fontFamily = "'Roboto Slab', serif";
-    document.getElementById("minutes").style.fontFamily = "'Roboto Slab', serif";
-    document.getElementById("seconds").style.fontFamily = "'Roboto Slab', serif";
-    document.getElementById("srp").style.fontFamily = "'Roboto Slab', serif";
-    document.getElementById("settings-text").style.fontFamily = "'Roboto Slab', serif";
-    document.getElementById("time-text").style.fontFamily = "'Roboto Slab', serif";
-    document.getElementById("font-styles").style.fontFamily = "'Roboto Slab', serif";
-    document.getElementById("change-colors").style.fontFamily = "'Roboto Slab', serif";
+    secondFont.classList.add("bg-default");
+    secondFont.classList.add("selected-font-color")
+    firstFont.classList.remove("bg-default");
+    firstFont.classList.add("default-font-bg-color");
+    firstFont.classList.remove("selected-font-color")
+    firstFont.classList.add("default-font-color")
+    thirdFont.classList.add("default-font-color");
+    thirdFont.classList.remove("selected-font-color")
+    thirdFont.classList.remove("bg-default");
+    thirdFont.classList.add("default-font-bg-color");
+    // Remove the selected font class
+    bodytag.classList.remove("DisplayF1");
+    // Add the "DisplayF2" class to the body element
+    bodytag.classList.add("DisplayF2");
 }
 
-function fontF3(){
+const fontF3 = () =>{
+    clear1();
+    clear2();
     // selected font style "identifier for selected font".
-    document.getElementById("fontThree").style.background = "#161932";
-    document.getElementById("fontThree").style.color = "#fff";
-    document.getElementById("fontTwo").style.background = "#EFF1FA";
-    document.getElementById("fontOne").style.background = "#EFF1FA";
-    document.getElementById("fontTwo").style.color = "#000";
-    document.getElementById("fontOne").style.color = "#000";
-    document.getElementById("pomodoro").style.fontFamily = "'Space Mono', monospace";
-    document.getElementById("short1").style.fontFamily = "'Space Mono', monospace";
-    document.getElementById("long1").style.fontFamily = "'Space Mono', monospace";
-    document.getElementById("minutes").style.fontFamily = "'Space Mono', monospace";
-    document.getElementById("seconds").style.fontFamily = "'Space Mono', monospace";
-    document.getElementById("srp").style.fontFamily = "'Space Mono', monospace";
-    document.getElementById("settings-text").style.fontFamily = "'Space Mono', monospace";
-    document.getElementById("time-text").style.fontFamily = "'Space Mono', monospace";
-    document.getElementById("font-styles").style.fontFamily = "'Space Mono', monospace";
-    document.getElementById("change-colors").style.fontFamily = "'Space Mono', monospace";
+    thirdFont.classList.add("bg-default");
+    thirdFont.classList.add("selected-font-color")
+    firstFont.classList.remove("bg-default");
+    firstFont.classList.add("default-font-bg-color");
+    firstFont.classList.remove("selected-font-color")
+    firstFont.classList.add("default-font-color")
+    secondFont.classList.add("default-font-color");
+    secondFont.classList.remove("selected-font-color")
+    secondFont.classList.remove("bg-default");
+    secondFont.classList.add("default-font-bg-color");
+    // Remove a class
+    bodytag.classList.remove("DisplayF2");
+   // Add the "DisplayF3" class to the body element
+   bodytag.classList.add("DisplayF3");
 };
 
-//logic for increment and decrement of input values
-var i = 0;
-function pomoIncrementOperator(){
-    document.getElementById("pomo_doro").value = ++i;
-    };
+// functions for increament and decreament operators for timer values
+    let pomoCount = 0;
+        const pomoIncrementOperator = () => {
+            document.getElementById("pomo_doro").value = ++pomoCount;
+        };
+        const pomoDecrementOperator = () => {
+            document.getElementById("pomo_doro").value = --pomoCount;
+        }; 
+    let shortBreakCount = 0;
+        const shortIncrementOperator = () => {
+            document.getElementById("short_break").value = ++shortBreakCount;
+        };
+        const shortDecrementOperator = () => {
+            document.getElementById("short_break").value = --shortBreakCount;
+        };   
+    let longBreakCount = 0;
+        const longIncrementOperator = () => {
+            document.getElementById("long_break").value = ++longBreakCount;
+        };
+        const longDecrementOperator = () => {
+            document.getElementById("long_break").value = --longBreakCount;
+        }; 
 
-var i = 0;
-function pomoDecrementOperator(){
-    document.getElementById("pomo_doro").value = --i;
-}; 
-
-var i = 0;
-function shortIncrementOperator(){
-    document.getElementById("short_break").value = ++i;
-    };
-
-var i = 0;
-function shortDecrementOperator(){
-    document.getElementById("short_break").value = --i;
-};   
-
-var i = 0;
-function longIncrementOperator(){
-    document.getElementById("long_break").value = ++i;
-    };
-
-var i = 0;
-function longDecrementOperator(){
-    document.getElementById("long_break").value = --i;
-};
-
-
-
-function apply() {
+const apply = () =>{
     //Get the value of the time input and set it as the inner text of the minutes element
-    //window.progressValue = document.getElementById("pomo_doro").value;
-    //console.log("Came first - "+progressValue);
     window.pomodoroTimeInput = document.getElementById("pomo_doro").value;
-    const pomodoroTimeInput = document.getElementById("pomo_doro");
     window.shortProgressValue = document.getElementById("short_break").value;
-    console.log("Came Second - "+shortProgressValue);
-    const shortBreakTimeInput = document.getElementById('short_break');
     window.longProgressValue = document.getElementById("long_break").value;
-    console.log("Came third - "+longProgressValue);
-    const longBreakTimeInput = document.getElementById('long_break');
     const Minutes = document.getElementById("minutes");
-    const Seconds = document.getElementById("seconds");
-    ///////////////////////////////////////////////////////////////////////
-    ///////////////////////////////////////////////////////////////////////
-    // if user selected pomodoro clock
+
+    // Getting displaying user timer preference
     if (localStorage.getItem("pomodoroSelected") == "pomodoro-selected") {
         window.progressValue = document.getElementById("pomo_doro").value;
         Minutes.innerText = parseInt(progressValue).toString().padStart(2, 0);
         
-        
-    }else if (localStorage.getItem("shortBreakSelected") == "short-break-selected") {
+     }else if (localStorage.getItem("shortBreakSelected") == "short-break-selected") {
         window.progressValue = document.getElementById("short_break").value;
         Minutes.innerText = parseInt(shortProgressValue).toString().padStart(2, 0);
         
     }else if (localStorage.getItem("longBreakSelected") == "long-break-selected") {
         window.progressValue = document.getElementById("long_break").value;
         Minutes.innerText = parseInt(longProgressValue).toString().padStart(2, 0);
-        
     }
-    ///////////////////////////////////////////////////////////////////////
-    ///////////////////////////////////////////////////////////////////////
-    
-    
-    // Close the dashboard
+// Close the dashboard
     closeDashboard();
 };
 
-  // logic to make the timer functional 
-  // varaible declarations
-  var minutesDisplay = document.getElementById("minutes");
-  var secondsDisplay = document.getElementById("seconds");
-  var countdownButton = document.getElementById("srp");
-  var pauseBtn = document.getElementById('pause');
-  var restartBtn = document.getElementById('restart');
-  var x;
-  var paused = false;
+// Timer logic
+  let minutesDisplay = document.getElementById("minutes");
+  let secondsDisplay = document.getElementById("seconds");
+  let countdownButton = document.getElementById("srp");
+  let pauseBtn = document.getElementById('pause');
+  let restartBtn = document.getElementById('restart');
+  let x;
+  let paused = false;
   
-  function startCountdown() {
-    
-
+const startCountdown = () =>{
     const pomoTime = window.progressValue;
-    const shortTime = window.shortProgressValue;
-    const longTime = window.longProgressValue;
     if (pomoTime === "" || pomoTime < 1) {
       alert("Please enter a valid time in minutes.");
       return;
     }
-    // Log the value of pomoTime to the console
-    console.log("pomoTime:", pomoTime);
-    console.log(shortTime);
-    console.log(longTime);
     function start() {
       window.countdownTime = 60 * parseInt(minutesDisplay.textContent) + parseInt(secondsDisplay.textContent);
       x = setInterval(function() {
@@ -385,17 +431,14 @@ function apply() {
     });
   }
   
-  function pause() {
+  const pause = () =>{
     clearTimeout(x);
     clearInterval(timerLoop);
     document.getElementById("pause").style.display = "none";
     document.getElementById("restart").style.display = "block";
-    //setTimeout(function(){
-       // window.location.reload();
-   // }, 5000);
   }
   
-  function restart(){
+  const restart = () =>{
     window.location.reload();
     clearTimeout(x);
     countdownButton.className = "start";
@@ -404,18 +447,15 @@ function apply() {
     secondsDisplay.textContent = "00";
     countdownButton.disabled = false;
      //clearInterval(timerLoop);
-        progressOne.style.display = 'none';
-        progressTwo.style.display = 'none';
-        progressThree.style.display = 'none';
-
-    }
-
-    //calling the timer to start
+    progressOne.style.display = 'none';
+    progressTwo.style.display = 'none';
+    progressThree.style.display = 'none';
+ }
+//calling the timer to start
      startCountdown();
-    // calling progress function
-
-    // resetting the buttons
-    function reset(){
+    
+// resetting the buttons
+    const reset = () =>{
         clearTimeout(x);
         minutesDisplay.textContent = "00";
         secondsDisplay.textContent = "00";
@@ -423,26 +463,22 @@ function apply() {
         progressTwo.style.display = 'none';
         progressThree.style.display = 'none';
         countdownButton.className = "start";
-        
         document.getElementById('restart').style.display = "none";
         document.getElementById("pause").style.display = "none";
     }
 
-
-    function setProgressCircleOn() {
+    const setProgressCircleOn = () =>{
     semicircles[0].style.display = 'block';
     semicircles[1].style.display = 'block';
     semicircles[2].style.display = 'block';
    };
 
-    function progressIndicator() {
-    ////////////////////////////////////////////////////////////
+    const progressIndicator = () =>{
     window.semicircles = document.querySelectorAll('.semicircle');
 
     // input 
     window.min = progressValue;
     const sec = 0;
-
     const minute = min * 60000;
     const second = sec * 1000;
     const setTime = minute + second;
@@ -452,7 +488,7 @@ function apply() {
     window.timerLoop = setInterval(countDownTimer);
     countDownTimer();  
 
-    function countDownTimer() {
+    const countDownTimer = () =>{
     const currentTime = Date.now();
     const remainingTime = futureTime - currentTime;
     const angle = (remainingTime / setTime) * 360;
@@ -462,13 +498,10 @@ function apply() {
     semicircles[2].style.display = 'none';
     semicircles[0].style.transform = 'rotate(180deg)';
     semicircles[1].style.transform = `rotate(${angle}deg)`;
-
     } else {
-    
-        semicircles[2].style.display = 'block';
-        semicircles[0].style.transform = `rotate(${angle}deg`;
-        semicircles[1].style.transform = `rotate(${angle}deg)`;
-
+    semicircles[2].style.display = 'block';
+    semicircles[0].style.transform = `rotate(${angle}deg`;
+    semicircles[1].style.transform = `rotate(${angle}deg)`;
     }
 
     if(remainingTime < 0) {
@@ -478,7 +511,5 @@ function apply() {
     window.semicircles[2].style.display = 'none';
     }
     }
-    
-    //////////////////////////////////////////////////////////
  };
 
