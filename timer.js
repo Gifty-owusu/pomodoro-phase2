@@ -485,14 +485,12 @@ const startCountdown = () =>{
     const startTime = Date.now();
     const futureTime = startTime + setTime;
     window.pausedTime = null;
-    window.timerLoop = setInterval(countDownTimer);
-    countDownTimer();  
 
     const countDownTimer = () =>{
     const currentTime = Date.now();
     const remainingTime = futureTime - currentTime;
     const angle = (remainingTime / setTime) * 360;
-
+    
     // progress indicator
     if(angle > 180) {
     semicircles[2].style.display = 'none';
@@ -510,6 +508,8 @@ const startCountdown = () =>{
     window.semicircles[1].style.display = 'none';
     window.semicircles[2].style.display = 'none';
     }
-    }
+    };
+    window.timerLoop = setInterval(countDownTimer);
+    countDownTimer(); 
  };
 

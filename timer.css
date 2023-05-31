@@ -146,9 +146,7 @@ body{
             font-weight: 600;
             z-index: 5;
             letter-spacing: 15px; 
-           
-
-        }
+           }
         .pause{
             color: #fff;
             letter-spacing: 0.5em; 
@@ -800,7 +798,7 @@ body{
 
         #settings-dashboard{
         width: 26em;
-        height: 34em;
+        height: 33em;
         top: 2em;
         position: fixed;
         left: 3em;
@@ -858,7 +856,7 @@ body{
             height: .1em;
             padding-top: 3em;
             padding-left: -5em;
-            margin-top: 1.5em;
+            margin-top: 1.2em;
             }
 
         #applyID{
