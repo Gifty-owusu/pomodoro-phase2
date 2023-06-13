@@ -8,10 +8,14 @@ const firstFont = document.getElementById("fontOne");
 const secondFont = document.getElementById("fontTwo");
 const thirdFont = document.getElementById("fontThree");
 const FirstColorSelected = document.getElementById("color-one");
-
+const secondColorSelected = document.getElementById("color-two");
+const thirdColorSelected = document.getElementById("color-three");
+const timeContainer = document.getElementById("tc");
 window.bodytag = document.querySelector('body');
-
-
+let countdownButton = document.getElementById("srp");
+let selectedColorOne = document.getElementById("path1");
+let selectedColorTwo = document.getElementById("path2"); 
+let selectedColorThree = document.getElementById("path3");
 // functions for opening and closing the settings dashboard
 const closeDashboard = () => {
     document.getElementById("settings").style.display = "none";
@@ -48,7 +52,18 @@ const colorC1 = () =>{
     for (let i = 0; i < circles.length; i++) {
         circles[i].style.backgroundColor = "#F87070";
     }
-    applyButton.classList.add("first-color-display");
+    countdownButton.addEventListener("mouseenter", function() {
+        countdownButton.classList.add("hover-color1");
+      });
+      countdownButton.addEventListener("mouseleave", function() {
+        countdownButton.classList.add("moveLeave-color");
+      });
+      selectedColorOne.classList.remove("hide-path")
+      selectedColorOne.classList.add("display-path");
+      selectedColorTwo.classList.add("hide-path");
+      selectedColorThree.classList.add("hide-path");
+            
+      applyButton.classList.add("first-color-display");
     
     // identifier for active theme or background color
     window.colorOne = "#F87070";
@@ -72,7 +87,20 @@ const colorC2 = () =>{
     for (let i = 0; i < circles.length; i++) {
         circles[i].style.backgroundColor = "#70F3F8";
     }
+    countdownButton.addEventListener("mouseenter", function() {
+        countdownButton.classList.add("hover-color2");
+      });
+      countdownButton.addEventListener("mouseleave", function() {
+        countdownButton.classList.add("moveLeave-color");
+      });
     applyButton.classList.add("second-color-display");
+
+    selectedColorTwo.classList.remove("PATH2");
+    selectedColorTwo.classList.remove("hide-path");
+    selectedColorTwo.classList.add("display-path");
+    selectedColorOne.classList.add("hide-path");
+    selectedColorThree.classList.add("hide-path");
+      
     // identifier for active theme or background color
          window.colorTwo = "#70F3F8";
     // overwriting the identifier for  active theme or background color 
@@ -95,7 +123,19 @@ const colorC3 = () =>{
 for (let i = 0; i < circles.length; i++) {
     circles[i].style.backgroundColor = "#D881F8";
 }
+countdownButton.addEventListener("mouseenter", function() {
+    countdownButton.classList.add("hover-color3");
+  });
+  countdownButton.addEventListener("mouseleave", function() {
+    countdownButton.classList.add("moveLeave-color");
+  });
 applyButton.classList.add("third-color-display");
+
+selectedColorThree.classList.remove("PATH3");
+selectedColorThree.classList.remove("hide-path");
+selectedColorThree.classList.add("display-path");
+selectedColorOne.classList.add("hide-path");
+selectedColorTwo.classList.add("hide-path");
 // identifier for active theme or background color
     window.colorThree = "#D881F8";
 // overwriting the identifier for  active theme or background color
@@ -147,8 +187,7 @@ applyButton.classList.add("third-color-display");
         longButton.classList.add("bg-default");
         shortButton.classList.add("bg-default");
      }
-    else if (window.colorTwo == "#70F3F8") {
-        
+    else if (window.colorTwo == "#70F3F8") {    
     } 
     else if (window.colorThree == "#D881F8") {
         longButton.classList.remove("third-color-display");
@@ -198,7 +237,6 @@ const shortOnclick = () =>{
 
     }else if (window.colorTwo == "#19c3c9") {
         
-
     }else if (window.colorThree == "#D881F8") {
         longButton.classList.remove("third-color-display");
         pomodoroButton.classList.remove("third-color-display");
@@ -258,10 +296,12 @@ const longOnclick = () =>{
 
 const clear1 = () =>{
     bodytag.classList.remove('DisplayF1');
+    timeContainer.classList.remove("space-mono-selected")
 };
 
 const clear2 = () =>{
     bodytag.classList.remove('DisplayF2');
+    timeContainer.classList.remove("space-mono-selected")
 };
 
 const clear3 = () =>{
@@ -283,7 +323,6 @@ const fontF1 = () =>{
     thirdFont.classList.remove("selected-font-color")
     thirdFont.classList.remove("bg-default");
     thirdFont.classList.add("default-font-bg-color");
-
 // Add the "DisplayF1" class to the body element
     bodytag.classList.add("DisplayF1");
 }
@@ -302,6 +341,7 @@ const fontF2 = () =>{
     thirdFont.classList.remove("selected-font-color")
     thirdFont.classList.remove("bg-default");
     thirdFont.classList.add("default-font-bg-color");
+    timeContainer.classList.add("roboto-selected")
     // Remove the selected font class
     bodytag.classList.remove("DisplayF1");
     // Add the "DisplayF2" class to the body element
@@ -322,11 +362,13 @@ const fontF3 = () =>{
     secondFont.classList.remove("selected-font-color")
     secondFont.classList.remove("bg-default");
     secondFont.classList.add("default-font-bg-color");
+    timeContainer.classList.add("space-mono-selected")
     // Remove a class
     bodytag.classList.remove("DisplayF2");
    // Add the "DisplayF3" class to the body element
    bodytag.classList.add("DisplayF3");
 };
+
 
 // functions for increament and decreament operators for timer values
     let pomoCount = 0;
@@ -378,7 +420,7 @@ const apply = () =>{
 // Timer logic
   let minutesDisplay = document.getElementById("minutes");
   let secondsDisplay = document.getElementById("seconds");
-  let countdownButton = document.getElementById("srp");
+ 
   let pauseBtn = document.getElementById('pause');
   let restartBtn = document.getElementById('restart');
   let x;
@@ -512,4 +554,6 @@ const startCountdown = () =>{
     window.timerLoop = setInterval(countDownTimer);
     countDownTimer(); 
  };
+
+ 
 
